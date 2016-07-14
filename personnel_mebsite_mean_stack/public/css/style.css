@@ -65,6 +65,13 @@ body a:hover{
 .fontfmly{
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
+.person-info h5 {
+    border-bottom: 1px solid #eeeeee;
+    color: #727272;
+    font-size: 14px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+}
 .shadeBack{
     min-height: 500px;
     background-color: rgba(0,0,0,.6);
