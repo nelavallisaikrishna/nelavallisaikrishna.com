@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="saikrishna nelavalli" />
+	<base href="/">
+
+	<title>Saikrishna nelavalli</title>
+
+	<!-- CSS -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+	<link rel="stylesheet" href="css/swipebox.css">
+
+	<!-- JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/modules//move-top.js"></script>
+	<script type="text/javascript" src="js/modules/easing.js"></script>
+
+	<!-- ANGULAR CUSTOM -->
+	<script src="js/controllers/MainCtrl.js"></script>
+	<script src="js/controllers/ProfileCtrl.js"></script>
+	<script src="js/services/ProfileService.js"></script>
+	<script src="js/appRoutes.js"></script>
+	<script src="js/app.js"></script>
+	
+	<!-- custom js here -->
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+
+	<!--web-fonts-->
+	<link href='//fonts.googleapis.com/css?family=Overlock:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	
+</head>
+<body ng-app="sampleApp" ng-controller="MainController">
+	<!-- header -->
+	<div class="col-md-12 col-lg-12 hidden-xs hidden-sm header">
+		<nav class="fixed-nav-bar">
+			<div class="container">
+				<div class="navbar-header pull-right">
+					<a class="navbar-brand" href="#contact" style="color:#f5f5f5">Contact</a>
+				</div>
+				<div class="navbar-header pull-right" ng-if="false">
+					<a class="navbar-brand" href="/" style="color:#f5f5f5">Profile</a>
+				</div>
+				<!--<div class="navbar-header pull-right">-->
+					<!--<a class="navbar-brand" href="/home" style="color:#f5f5f5">Home</a>-->
+				<!--</div>-->
+				<div class="navbar-header pull-right">
+					<a class="navbar-brand" href="#home" style="color:#f5f5f5">Home</a>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="col-sm-12 col-xs-12 hidden-md hidden-lg header">
+		<nav class="fixed-nav-bar" style="width: 92%;">
+			<div class="navbar-header" ng-if="false">
+				<a class="navbar-brand" href="/" style="color:#f5f5f5">Profile</a>
+			</div>
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/home" style="margin-left: 20%; margin-top: -13%;color:#f5f5f5">Home</a>
+			</div>
+			<div class="navbar-header pull-right" style="margin-top: -14%">
+				<a class="navbar-brand" href="#contact" style="color:#f5f5f5">Contact</a>
+			</div>
+		</nav>
+	</div>
+	<!-- //header -->
+	<div ng-view></div>
+	<!--contact -->
+
+	<!--//contact -->
+	<!--footer-->
+	<div class="footer">
+		<div class="container">
+			<p>© 2016 @saikrishna ALL Rights Reserved.
+				<span class="falinks">
+					<a href="https://www.facebook.com/saikrishna.nelavalli" style="color: #D5D4D4;"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+						<a href="https://github.com/nelavallisaikrishna" style="color: #D5D4D4;"><i id="social-tw" class="fa fa-github-square fa-3x social"></i></a>
+						<a href="https://www.linkedin.com/in/saikrishnanelavalli?trk=nav_responsive_tab_profile" style="color: #D5D4D4;"><i id="social-gp" class="fa fa-linkedin-square fa-3x social"></i></a>
+						<a href="mailto:saikrishna.ece2013@gmail.com" style="color: #D5D4D4;"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+				</span>
+			</p>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+			// Add smooth scrolling to all links
+			$("a").on('click', function(event) {
+
+				// Make sure this.hash has a value before overriding default behavior
+				if (this.hash !== "") {
+					// Prevent default anchor click behavior
+					event.preventDefault();
+
+					// Store hash
+					var hash = this.hash;
+
+					// Using jQuery's animate() method to add smooth page scroll
+					// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 800, function(){
+
+						// Add hash (#) to URL when done scrolling (default click behavior)
+						window.location.hash = hash;
+					});
+				} // End if
+			});
+		});
+	</script>
+	<!--//footer-->
+</body>
+</html>
