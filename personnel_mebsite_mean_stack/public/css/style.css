@@ -59,7 +59,19 @@ body a:hover{
 }
 .banner-info{
 	background: url(/img/cover.jpg)repeat 0px 0px;
-    min-height: 500px;
+   height: 500px;
+}
+.shadeBack{
+    height: 500px;
+    background-color: rgba(0,0,0,.6);
+}
+.banner-infomobi{
+    background: url(/img/saiimg5.jpg)repeat 0px 0px;
+    height: 365px;
+}
+.shadeBackmobi{
+    height: 365px;
+    background-color: rgba(0,0,0,.6);
 }
 
 .fontfmly{
@@ -72,10 +84,7 @@ body a:hover{
     margin-bottom: 12px;
     padding-bottom: 12px;
 }
-.shadeBack{
-    min-height: 500px;
-    background-color: rgba(0,0,0,.6);
-}
+
 .header-left img {
     width: 100%;
     border: 5px solid #19CF86;

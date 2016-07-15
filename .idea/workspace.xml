@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1d82e76-82f9-4c87-a45f-9a615ee6c791" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/img/saiimg3.jpg" afterPath="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/img/saiimg3.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/css/style.css" afterPath="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/profile.html" afterPath="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/profile.html" />
     </list>
     <ignored path="mywebsite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -294,7 +291,13 @@
       <option name="project" value="LOCAL" />
       <updated>1468495642111</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="4th commit">
+      <created>1468502515904</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1468502515904</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -343,7 +346,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second commiyt" />
     <MESSAGE value="third commiyt" />
-    <option name="LAST_COMMIT_MESSAGE" value="third commiyt" />
+    <MESSAGE value="4th commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="4th commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
