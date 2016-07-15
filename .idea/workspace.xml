@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1d82e76-82f9-4c87-a45f-9a615ee6c791" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/img/sai.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/img/smily.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/img/ss.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personnel_mebsite_mean_stack/.idea/workspace.xml" afterPath="$PROJECT_DIR$/personnel_mebsite_mean_stack/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/index.html" afterPath="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/profile.html" afterPath="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/profile.html" />
     </list>
     <ignored path="mywebsite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.925926">
-              <caret line="122" column="34" selection-start-line="122" selection-start-column="34" selection-end-line="122" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.32264152">
+              <caret line="97" column="95" selection-start-line="97" selection-start-column="95" selection-end-line="97" selection-end-column="95" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -83,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44919786">
+            <state vertical-scroll-proportion="-4.4210525">
               <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
               <folding />
             </state>
@@ -103,8 +98,8 @@
       <list>
         <option value="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/js/controllers/ProfileCtrl.js" />
         <option value="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/css/style.css" />
-        <option value="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/profile.html" />
         <option value="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/index.html" />
+        <option value="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/profile.html" />
       </list>
     </option>
   </component>
@@ -575,10 +570,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.4210525">
+          <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.925926">
-          <caret line="122" column="34" selection-start-line="122" selection-start-column="34" selection-end-line="122" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.32264152">
+          <caret line="97" column="95" selection-start-line="97" selection-start-column="95" selection-end-line="97" selection-end-column="95" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -615,14 +618,6 @@
             <element signature="n#style#0;n#iframe#0;n#div#0;n#div#0;n#div#0;n#div#7;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#7;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44919786">
-          <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
