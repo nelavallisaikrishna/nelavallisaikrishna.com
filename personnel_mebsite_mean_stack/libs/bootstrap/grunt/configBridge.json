@@ -13,7 +13,11 @@
     "docsJs": [
       "../assets/js/vendor/holder.min.js",
       "../assets/js/vendor/ZeroClipboard.min.js",
+<<<<<<< HEAD
       "../assets/js/vendor/anchor.js",
+=======
+      "../assets/js/vendor/anchor.min.js",
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
       "../assets/js/src/application.js"
     ]
   },
@@ -37,8 +41,13 @@
       "+function ($) {",
       "  'use strict';",
       "  var version = $.fn.jquery.split(' ')[0].split('.')",
+<<<<<<< HEAD
       "  if ((version[0] < 2 && version[1] < 9) || (version[0] == 1 && version[1] == 9 && version[2] < 1) || (version[0] > 2)) {",
       "    throw new Error('Bootstrap\\'s JavaScript requires jQuery version 1.9.1 or higher, but lower than version 3')",
+=======
+      "  if ((version[0] < 2 && version[1] < 9) || (version[0] == 1 && version[1] == 9 && version[2] < 1) || (version[0] > 3)) {",
+      "    throw new Error('Bootstrap\\'s JavaScript requires jQuery version 1.9.1 or higher, but lower than version 4')",
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
       "  }",
       "}(jQuery);\n\n"
     ]

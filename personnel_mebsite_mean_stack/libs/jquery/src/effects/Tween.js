@@ -3,6 +3,11 @@ define( [
 	"../css"
 ], function( jQuery ) {
 
+<<<<<<< HEAD
+=======
+"use strict";
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 function Tween( elem, options, prop, end, easing ) {
 	return new Tween.prototype.init( elem, options, prop, end, easing );
 }
@@ -93,7 +98,11 @@ Tween.propHooks = {
 	}
 };
 
+<<<<<<< HEAD
 // Support: IE9
+=======
+// Support: IE <=9 only
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 // Panic based approach to setting things on disconnected nodes
 Tween.propHooks.scrollTop = Tween.propHooks.scrollLeft = {
 	set: function( tween ) {
@@ -115,7 +124,11 @@ jQuery.easing = {
 
 jQuery.fx = Tween.prototype.init;
 
+<<<<<<< HEAD
 // Back Compat <1.8 extension point
+=======
+// Back compat <1.8 extension point
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 jQuery.fx.step = {};
 
 } );

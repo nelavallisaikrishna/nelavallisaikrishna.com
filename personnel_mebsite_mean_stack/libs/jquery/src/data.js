@@ -5,6 +5,11 @@ define( [
 	"./data/var/dataUser"
 ], function( jQuery, access, dataPriv, dataUser ) {
 
+<<<<<<< HEAD
+=======
+"use strict";
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 //	Implementation Summary
 //
 //	1. Enforce API surface and semantic compatibility with 1.9.x branch
@@ -35,7 +40,11 @@ function dataAttr( elem, key, data ) {
 
 					// Only convert to a number if it doesn't change the string
 					+data + "" === data ? +data :
+<<<<<<< HEAD
 					rbrace.test( data ) ? jQuery.parseJSON( data ) :
+=======
+					rbrace.test( data ) ? JSON.parse( data ) :
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 					data;
 			} catch ( e ) {}
 
@@ -87,7 +96,11 @@ jQuery.fn.extend( {
 					i = attrs.length;
 					while ( i-- ) {
 
+<<<<<<< HEAD
 						// Support: IE11+
+=======
+						// Support: IE 11 only
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 						// The attrs elements can be null (#14894)
 						if ( attrs[ i ] ) {
 							name = attrs[ i ].name;
@@ -112,7 +125,11 @@ jQuery.fn.extend( {
 		}
 
 		return access( this, function( value ) {
+<<<<<<< HEAD
 			var data, camelKey;
+=======
+			var data;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 			// The calling jQuery object (element matches) is not empty
 			// (and therefore has an element appears at this[ 0 ]) and the
@@ -122,6 +139,7 @@ jQuery.fn.extend( {
 			if ( elem && value === undefined ) {
 
 				// Attempt to get data from the cache
+<<<<<<< HEAD
 				// with the key as-is
 				data = dataUser.get( elem, key ) ||
 
@@ -138,13 +156,21 @@ jQuery.fn.extend( {
 				// Attempt to get data from the cache
 				// with the key camelized
 				data = dataUser.get( elem, camelKey );
+=======
+				// The key will always be camelCased in Data
+				data = dataUser.get( elem, key );
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				if ( data !== undefined ) {
 					return data;
 				}
 
 				// Attempt to "discover" the data in
 				// HTML5 custom data-* attrs
+<<<<<<< HEAD
 				data = dataAttr( elem, camelKey, undefined );
+=======
+				data = dataAttr( elem, key );
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				if ( data !== undefined ) {
 					return data;
 				}
@@ -154,6 +180,7 @@ jQuery.fn.extend( {
 			}
 
 			// Set the data...
+<<<<<<< HEAD
 			camelKey = jQuery.camelCase( key );
 			this.each( function() {
 
@@ -172,6 +199,12 @@ jQuery.fn.extend( {
 				if ( key.indexOf( "-" ) > -1 && data !== undefined ) {
 					dataUser.set( this, key, value );
 				}
+=======
+			this.each( function() {
+
+				// We always store the camelCased key
+				dataUser.set( this, key, value );
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			} );
 		}, null, value, arguments.length > 1, null, true );
 	},

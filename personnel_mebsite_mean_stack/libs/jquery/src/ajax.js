@@ -7,6 +7,7 @@ define( [
 	"./ajax/var/rquery",
 
 	"./core/init",
+<<<<<<< HEAD
 	"./ajax/parseJSON",
 	"./ajax/parseXML",
 	"./event/trigger",
@@ -14,6 +15,18 @@ define( [
 ], function( jQuery, document, rnotwhite, location, nonce, rquery ) {
 
 var
+=======
+	"./ajax/parseXML",
+	"./event/trigger",
+	"./deferred",
+	"./serialize" // jQuery.param
+], function( jQuery, document, rnotwhite, location, nonce, rquery ) {
+
+"use strict";
+
+var
+	r20 = /%20/g,
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	rhash = /#.*$/,
 	rts = /([?&])_=[^&]*/,
 	rheaders = /^(.*?):[ \t]*([^\r\n]*)$/mg,
@@ -223,7 +236,11 @@ function ajaxConvert( s, response, jqXHR, isSuccess ) {
 
 		if ( current ) {
 
+<<<<<<< HEAD
 		// There's only work to do if current dataType is non-auto
+=======
+			// There's only work to do if current dataType is non-auto
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			if ( current === "*" ) {
 
 				current = prev;
@@ -303,6 +320,10 @@ jQuery.extend( {
 		processData: true,
 		async: true,
 		contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+<<<<<<< HEAD
+=======
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 		/*
 		timeout: 0,
 		data: null,
@@ -346,7 +367,11 @@ jQuery.extend( {
 			"text html": true,
 
 			// Evaluate text as a json expression
+<<<<<<< HEAD
 			"text json": jQuery.parseJSON,
+=======
+			"text json": JSON.parse,
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 			// Parse text as xml
 			"text xml": jQuery.parseXML
@@ -405,12 +430,24 @@ jQuery.extend( {
 			// Url cleanup var
 			urlAnchor,
 
+<<<<<<< HEAD
+=======
+			// Request state (becomes false upon send and true upon completion)
+			completed,
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			// To know if global events are to be dispatched
 			fireGlobals,
 
 			// Loop variable
 			i,
 
+<<<<<<< HEAD
+=======
+			// uncached part of the url
+			uncached,
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			// Create the final options object
 			s = jQuery.ajaxSetup( {}, options ),
 
@@ -434,9 +471,12 @@ jQuery.extend( {
 			requestHeaders = {},
 			requestHeadersNames = {},
 
+<<<<<<< HEAD
 			// The jqXHR state
 			state = 0,
 
+=======
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			// Default abort message
 			strAbort = "canceled",
 
@@ -447,7 +487,11 @@ jQuery.extend( {
 				// Builds headers hashtable if needed
 				getResponseHeader: function( key ) {
 					var match;
+<<<<<<< HEAD
 					if ( state === 2 ) {
+=======
+					if ( completed ) {
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 						if ( !responseHeaders ) {
 							responseHeaders = {};
 							while ( ( match = rheaders.exec( responseHeadersString ) ) ) {
@@ -461,14 +505,24 @@ jQuery.extend( {
 
 				// Raw string
 				getAllResponseHeaders: function() {
+<<<<<<< HEAD
 					return state === 2 ? responseHeadersString : null;
+=======
+					return completed ? responseHeadersString : null;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				},
 
 				// Caches the header
 				setRequestHeader: function( name, value ) {
+<<<<<<< HEAD
 					var lname = name.toLowerCase();
 					if ( !state ) {
 						name = requestHeadersNames[ lname ] = requestHeadersNames[ lname ] || name;
+=======
+					if ( completed == null ) {
+						name = requestHeadersNames[ name.toLowerCase() ] =
+							requestHeadersNames[ name.toLowerCase() ] || name;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 						requestHeaders[ name ] = value;
 					}
 					return this;
@@ -476,7 +530,11 @@ jQuery.extend( {
 
 				// Overrides response content-type header
 				overrideMimeType: function( type ) {
+<<<<<<< HEAD
 					if ( !state ) {
+=======
+					if ( completed == null ) {
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 						s.mimeType = type;
 					}
 					return this;
@@ -486,6 +544,7 @@ jQuery.extend( {
 				statusCode: function( map ) {
 					var code;
 					if ( map ) {
+<<<<<<< HEAD
 						if ( state < 2 ) {
 							for ( code in map ) {
 
@@ -496,6 +555,18 @@ jQuery.extend( {
 
 							// Execute the appropriate callbacks
 							jqXHR.always( map[ jqXHR.status ] );
+=======
+						if ( completed ) {
+
+							// Execute the appropriate callbacks
+							jqXHR.always( map[ jqXHR.status ] );
+						} else {
+
+							// Lazy-add the new callbacks in a way that preserves old ones
+							for ( code in map ) {
+								statusCode[ code ] = [ statusCode[ code ], map[ code ] ];
+							}
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 						}
 					}
 					return this;
@@ -513,6 +584,7 @@ jQuery.extend( {
 			};
 
 		// Attach deferreds
+<<<<<<< HEAD
 		deferred.promise( jqXHR ).complete = completeDeferred.add;
 		jqXHR.success = jqXHR.done;
 		jqXHR.error = jqXHR.fail;
@@ -522,24 +594,46 @@ jQuery.extend( {
 		// Handle falsy url in the settings object (#10093: consistency with old signature)
 		// We also use the url parameter if available
 		s.url = ( ( url || s.url || location.href ) + "" ).replace( rhash, "" )
+=======
+		deferred.promise( jqXHR );
+
+		// Add protocol if not provided (prefilters might expect it)
+		// Handle falsy url in the settings object (#10093: consistency with old signature)
+		// We also use the url parameter if available
+		s.url = ( ( url || s.url || location.href ) + "" )
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			.replace( rprotocol, location.protocol + "//" );
 
 		// Alias method option to type as per ticket #12004
 		s.type = options.method || options.type || s.method || s.type;
 
 		// Extract dataTypes list
+<<<<<<< HEAD
 		s.dataTypes = jQuery.trim( s.dataType || "*" ).toLowerCase().match( rnotwhite ) || [ "" ];
+=======
+		s.dataTypes = ( s.dataType || "*" ).toLowerCase().match( rnotwhite ) || [ "" ];
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 		// A cross-domain request is in order when the origin doesn't match the current origin.
 		if ( s.crossDomain == null ) {
 			urlAnchor = document.createElement( "a" );
 
+<<<<<<< HEAD
 			// Support: IE8-11+
 			// IE throws exception if url is malformed, e.g. http://example.com:80x/
 			try {
 				urlAnchor.href = s.url;
 
 				// Support: IE8-11+
+=======
+			// Support: IE <=8 - 11, Edge 12 - 13
+			// IE throws exception on accessing the href property if url is malformed,
+			// e.g. http://example.com:80x/
+			try {
+				urlAnchor.href = s.url;
+
+				// Support: IE <=8 - 11 only
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				// Anchor's host property isn't correctly set when s.url is relative
 				urlAnchor.href = urlAnchor.href;
 				s.crossDomain = originAnchor.protocol + "//" + originAnchor.host !==
@@ -561,7 +655,11 @@ jQuery.extend( {
 		inspectPrefiltersOrTransports( prefilters, s, options, jqXHR );
 
 		// If request was aborted inside a prefilter, stop there
+<<<<<<< HEAD
 		if ( state === 2 ) {
+=======
+		if ( completed ) {
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			return jqXHR;
 		}
 
@@ -582,19 +680,34 @@ jQuery.extend( {
 
 		// Save the URL in case we're toying with the If-Modified-Since
 		// and/or If-None-Match header later on
+<<<<<<< HEAD
 		cacheURL = s.url;
+=======
+		// Remove hash to simplify url manipulation
+		cacheURL = s.url.replace( rhash, "" );
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 		// More options handling for requests with no content
 		if ( !s.hasContent ) {
 
+<<<<<<< HEAD
 			// If data is available, append data to url
 			if ( s.data ) {
 				cacheURL = ( s.url += ( rquery.test( cacheURL ) ? "&" : "?" ) + s.data );
+=======
+			// Remember the hash so we can put it back
+			uncached = s.url.slice( cacheURL.length );
+
+			// If data is available, append data to url
+			if ( s.data ) {
+				cacheURL += ( rquery.test( cacheURL ) ? "&" : "?" ) + s.data;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 				// #9682: remove data so that it's not used in an eventual retry
 				delete s.data;
 			}
 
+<<<<<<< HEAD
 			// Add anti-cache in url if needed
 			if ( s.cache === false ) {
 				s.url = rts.test( cacheURL ) ?
@@ -605,6 +718,21 @@ jQuery.extend( {
 					// Otherwise add one to the end
 					cacheURL + ( rquery.test( cacheURL ) ? "&" : "?" ) + "_=" + nonce++;
 			}
+=======
+			// Add anti-cache in uncached url if needed
+			if ( s.cache === false ) {
+				cacheURL = cacheURL.replace( rts, "" );
+				uncached = ( rquery.test( cacheURL ) ? "&" : "?" ) + "_=" + ( nonce++ ) + uncached;
+			}
+
+			// Put hash and anti-cache on the URL that will be requested (gh-1732)
+			s.url = cacheURL + uncached;
+
+		// Change '%20' to '+' if this is encoded form body content (gh-2658)
+		} else if ( s.data && s.processData &&
+			( s.contentType || "" ).indexOf( "application/x-www-form-urlencoded" ) === 0 ) {
+			s.data = s.data.replace( r20, "+" );
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 		}
 
 		// Set the If-Modified-Since and/or If-None-Match header, if in ifModified mode.
@@ -638,7 +766,11 @@ jQuery.extend( {
 
 		// Allow custom headers/mimetypes and early abort
 		if ( s.beforeSend &&
+<<<<<<< HEAD
 			( s.beforeSend.call( callbackContext, jqXHR, s ) === false || state === 2 ) ) {
+=======
+			( s.beforeSend.call( callbackContext, jqXHR, s ) === false || completed ) ) {
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 			// Abort if not done already and return
 			return jqXHR.abort();
@@ -648,9 +780,15 @@ jQuery.extend( {
 		strAbort = "abort";
 
 		// Install callbacks on deferreds
+<<<<<<< HEAD
 		for ( i in { success: 1, error: 1, complete: 1 } ) {
 			jqXHR[ i ]( s[ i ] );
 		}
+=======
+		completeDeferred.add( s.complete );
+		jqXHR.done( s.success );
+		jqXHR.fail( s.error );
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 		// Get transport
 		transport = inspectPrefiltersOrTransports( transports, s, options, jqXHR );
@@ -667,7 +805,11 @@ jQuery.extend( {
 			}
 
 			// If request was aborted inside ajaxSend, stop there
+<<<<<<< HEAD
 			if ( state === 2 ) {
+=======
+			if ( completed ) {
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				return jqXHR;
 			}
 
@@ -679,6 +821,7 @@ jQuery.extend( {
 			}
 
 			try {
+<<<<<<< HEAD
 				state = 1;
 				transport.send( requestHeaders, done );
 			} catch ( e ) {
@@ -691,6 +834,19 @@ jQuery.extend( {
 				} else {
 					throw e;
 				}
+=======
+				completed = false;
+				transport.send( requestHeaders, done );
+			} catch ( e ) {
+
+				// Rethrow post-completion exceptions
+				if ( completed ) {
+					throw e;
+				}
+
+				// Propagate others as results
+				done( -1, e );
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			}
 		}
 
@@ -699,6 +855,7 @@ jQuery.extend( {
 			var isSuccess, success, error, response, modified,
 				statusText = nativeStatusText;
 
+<<<<<<< HEAD
 			// Called once
 			if ( state === 2 ) {
 				return;
@@ -706,6 +863,14 @@ jQuery.extend( {
 
 			// State is "done" now
 			state = 2;
+=======
+			// Ignore repeat invocations
+			if ( completed ) {
+				return;
+			}
+
+			completed = true;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 			// Clear timeout if it exists
 			if ( timeoutTimer ) {

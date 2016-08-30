@@ -2,6 +2,11 @@ define( [
 	"../core"
 ], function( jQuery ) {
 
+<<<<<<< HEAD
+=======
+"use strict";
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 // Multifunctional method to get and set values of a collection
 // The value/s can optionally be executed if it's a function
 var access = function( elems, fn, key, value, chainable, emptyGet, raw ) {

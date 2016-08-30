@@ -1,8 +1,15 @@
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: alert.js v3.3.6
  * http://getbootstrap.com/javascript/#alerts
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
+=======
+ * Bootstrap: alert.js v3.3.7
+ * http://getbootstrap.com/javascript/#alerts
+ * ========================================================================
+ * Copyright 2011-2016 Twitter, Inc.
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -18,7 +25,11 @@
     $(el).on('click', dismiss, this.close)
   }
 
+<<<<<<< HEAD
   Alert.VERSION = '3.3.6'
+=======
+  Alert.VERSION = '3.3.7'
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
   Alert.TRANSITION_DURATION = 150
 
@@ -31,7 +42,11 @@
       selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
     }
 
+<<<<<<< HEAD
     var $parent = $(selector)
+=======
+    var $parent = $(selector === '#' ? [] : selector)
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
     if (e) e.preventDefault()
 

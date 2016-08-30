@@ -5,13 +5,21 @@ define( [
 	"../selector"
 ], function( jQuery, indexOf, rneedsContext ) {
 
+<<<<<<< HEAD
+=======
+"use strict";
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 var risSimple = /^.[^:#\[\.,]*$/;
 
 // Implement the identical functionality for filter and not
 function winnow( elements, qualifier, not ) {
 	if ( jQuery.isFunction( qualifier ) ) {
 		return jQuery.grep( elements, function( elem, i ) {
+<<<<<<< HEAD
 			/* jshint -W018 */
+=======
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			return !!qualifier.call( elem, i, elem ) !== not;
 		} );
 
@@ -33,7 +41,11 @@ function winnow( elements, qualifier, not ) {
 	}
 
 	return jQuery.grep( elements, function( elem ) {
+<<<<<<< HEAD
 		return ( indexOf.call( qualifier, elem ) > -1 ) !== not;
+=======
+		return ( indexOf.call( qualifier, elem ) > -1 ) !== not && elem.nodeType === 1;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	} );
 }
 
@@ -53,9 +65,14 @@ jQuery.filter = function( expr, elems, not ) {
 
 jQuery.fn.extend( {
 	find: function( selector ) {
+<<<<<<< HEAD
 		var i,
 			len = this.length,
 			ret = [],
+=======
+		var i, ret,
+			len = this.length,
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			self = this;
 
 		if ( typeof selector !== "string" ) {
@@ -68,14 +85,23 @@ jQuery.fn.extend( {
 			} ) );
 		}
 
+<<<<<<< HEAD
+=======
+		ret = this.pushStack( [] );
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 		for ( i = 0; i < len; i++ ) {
 			jQuery.find( selector, self[ i ], ret );
 		}
 
+<<<<<<< HEAD
 		// Needed because $( selector, context ) becomes $( context ).find( selector )
 		ret = this.pushStack( len > 1 ? jQuery.unique( ret ) : ret );
 		ret.selector = this.selector ? this.selector + " " + selector : selector;
 		return ret;
+=======
+		return len > 1 ? jQuery.uniqueSort( ret ) : ret;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	},
 	filter: function( selector ) {
 		return this.pushStack( winnow( this, selector || [], false ) );

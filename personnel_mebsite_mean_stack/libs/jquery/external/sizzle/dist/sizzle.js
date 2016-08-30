@@ -1,12 +1,21 @@
 /*!
+<<<<<<< HEAD
  * Sizzle CSS Selector Engine v2.2.1
  * http://sizzlejs.com/
+=======
+ * Sizzle CSS Selector Engine v2.3.0
+ * https://sizzlejs.com/
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license
  * http://jquery.org/license
  *
+<<<<<<< HEAD
  * Date: 2015-10-17
+=======
+ * Date: 2016-01-04
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
  */
 (function( window ) {
 
@@ -47,9 +56,12 @@ var i,
 		return 0;
 	},
 
+<<<<<<< HEAD
 	// General-purpose constants
 	MAX_NEGATIVE = 1 << 31,
 
+=======
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	// Instance methods
 	hasOwn = ({}).hasOwnProperty,
 	arr = [],
@@ -58,7 +70,11 @@ var i,
 	push = arr.push,
 	slice = arr.slice,
 	// Use a stripped-down indexOf as it's faster than native
+<<<<<<< HEAD
 	// http://jsperf.com/thor-indexof-vs-for/5
+=======
+	// https://jsperf.com/thor-indexof-vs-for/5
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	indexOf = function( list, elem ) {
 		var i = 0,
 			len = list.length;
@@ -78,7 +94,11 @@ var i,
 	whitespace = "[\\x20\\t\\r\\n\\f]",
 
 	// http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
+<<<<<<< HEAD
 	identifier = "(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",
+=======
+	identifier = "(?:\\\\.|[\\w-]|[^\0-\\xa0])+",
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 	// Attribute selectors: http://www.w3.org/TR/selectors/#attribute-selectors
 	attributes = "\\[" + whitespace + "*(" + identifier + ")(?:" + whitespace +
@@ -135,9 +155,15 @@ var i,
 	rquickExpr = /^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,
 
 	rsibling = /[+~]/,
+<<<<<<< HEAD
 	rescape = /'|\\/g,
 
 	// CSS escapes http://www.w3.org/TR/CSS21/syndata.html#escaped-characters
+=======
+
+	// CSS escapes
+	// http://www.w3.org/TR/CSS21/syndata.html#escaped-characters
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	runescape = new RegExp( "\\\\([\\da-f]{1,6}" + whitespace + "?|(" + whitespace + ")|.)", "ig" ),
 	funescape = function( _, escaped, escapedWhitespace ) {
 		var high = "0x" + escaped - 0x10000;
@@ -153,13 +179,46 @@ var i,
 				String.fromCharCode( high >> 10 | 0xD800, high & 0x3FF | 0xDC00 );
 	},
 
+<<<<<<< HEAD
+=======
+	// CSS string/identifier serialization
+	// https://drafts.csswg.org/cssom/#common-serializing-idioms
+	rcssescape = /([\0-\x1f\x7f]|^-?\d)|^-$|[^\x80-\uFFFF\w-]/g,
+	fcssescape = function( ch, asCodePoint ) {
+		if ( asCodePoint ) {
+
+			// U+0000 NULL becomes U+FFFD REPLACEMENT CHARACTER
+			if ( ch === "\0" ) {
+				return "\uFFFD";
+			}
+
+			// Control characters and (dependent upon position) numbers get escaped as code points
+			return ch.slice( 0, -1 ) + "\\" + ch.charCodeAt( ch.length - 1 ).toString( 16 ) + " ";
+		}
+
+		// Other potentially-special ASCII characters get backslash-escaped
+		return "\\" + ch;
+	},
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	// Used for iframes
 	// See setDocument()
 	// Removing the function wrapper causes a "Permission Denied"
 	// error in IE
 	unloadHandler = function() {
 		setDocument();
+<<<<<<< HEAD
 	};
+=======
+	},
+
+	disabledAncestor = addCombinator(
+		function( elem ) {
+			return elem.disabled === true;
+		},
+		{ dir: "parentNode", next: "legend" }
+	);
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 // Optimize for push.apply( _, NodeList )
 try {
@@ -191,7 +250,11 @@ try {
 }
 
 function Sizzle( selector, context, results, seed ) {
+<<<<<<< HEAD
 	var m, i, elem, nid, nidselect, match, groups, newSelector,
+=======
+	var m, i, elem, nid, match, groups, newSelector,
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 		newContext = context && context.ownerDocument,
 
 		// nodeType defaults to 9, since context defaults to document
@@ -284,7 +347,11 @@ function Sizzle( selector, context, results, seed ) {
 
 					// Capture the context ID, setting it first if necessary
 					if ( (nid = context.getAttribute( "id" )) ) {
+<<<<<<< HEAD
 						nid = nid.replace( rescape, "\\$&" );
+=======
+						nid = nid.replace( rcssescape, fcssescape );
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 					} else {
 						context.setAttribute( "id", (nid = expando) );
 					}
@@ -292,9 +359,14 @@ function Sizzle( selector, context, results, seed ) {
 					// Prefix every selector in the list
 					groups = tokenize( selector );
 					i = groups.length;
+<<<<<<< HEAD
 					nidselect = ridentifier.test( nid ) ? "#" + nid : "[id='" + nid + "']";
 					while ( i-- ) {
 						groups[i] = nidselect + " " + toSelector( groups[i] );
+=======
+					while ( i-- ) {
+						groups[i] = "#" + nid + " " + toSelector( groups[i] );
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 					}
 					newSelector = groups.join( "," );
 
@@ -355,6 +427,7 @@ function markFunction( fn ) {
 
 /**
  * Support testing using an element
+<<<<<<< HEAD
  * @param {Function} fn Passed the created div and expects a boolean result
  */
 function assert( fn ) {
@@ -362,15 +435,32 @@ function assert( fn ) {
 
 	try {
 		return !!fn( div );
+=======
+ * @param {Function} fn Passed the created element and returns a boolean result
+ */
+function assert( fn ) {
+	var el = document.createElement("fieldset");
+
+	try {
+		return !!fn( el );
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	} catch (e) {
 		return false;
 	} finally {
 		// Remove from its parent by default
+<<<<<<< HEAD
 		if ( div.parentNode ) {
 			div.parentNode.removeChild( div );
 		}
 		// release memory in IE
 		div = null;
+=======
+		if ( el.parentNode ) {
+			el.parentNode.removeChild( el );
+		}
+		// release memory in IE
+		el = null;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	}
 }
 
@@ -397,8 +487,12 @@ function addHandle( attrs, handler ) {
 function siblingCheck( a, b ) {
 	var cur = b && a,
 		diff = cur && a.nodeType === 1 && b.nodeType === 1 &&
+<<<<<<< HEAD
 			( ~b.sourceIndex || MAX_NEGATIVE ) -
 			( ~a.sourceIndex || MAX_NEGATIVE );
+=======
+			a.sourceIndex - b.sourceIndex;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 	// Use IE sourceIndex if available on both nodes
 	if ( diff ) {
@@ -440,6 +534,37 @@ function createButtonPseudo( type ) {
 }
 
 /**
+<<<<<<< HEAD
+=======
+ * Returns a function to use in pseudos for :enabled/:disabled
+ * @param {Boolean} disabled true for :disabled; false for :enabled
+ */
+function createDisabledPseudo( disabled ) {
+	// Known :disabled false positives:
+	// IE: *[disabled]:not(button, input, select, textarea, optgroup, option, menuitem, fieldset)
+	// not IE: fieldset[disabled] > legend:nth-of-type(n+2) :can-disable
+	return function( elem ) {
+
+		// Check form elements and option elements for explicit disabling
+		return "label" in elem && elem.disabled === disabled ||
+			"form" in elem && elem.disabled === disabled ||
+
+			// Check non-disabled form elements for fieldset[disabled] ancestors
+			"form" in elem && elem.disabled === false && (
+				// Support: IE6-11+
+				// Ancestry is covered for us
+				elem.isDisabled === disabled ||
+
+				// Otherwise, assume any non-<option> under fieldset[disabled] is disabled
+				/* jshint -W018 */
+				elem.isDisabled !== !disabled &&
+					("label" in elem || !disabledAncestor( elem )) !== disabled
+			);
+	};
+}
+
+/**
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
  * Returns a function to use in pseudos for positionals
  * @param {Function} fn
  */
@@ -491,7 +616,11 @@ isXML = Sizzle.isXML = function( elem ) {
  * @returns {Object} Returns the current document
  */
 setDocument = Sizzle.setDocument = function( node ) {
+<<<<<<< HEAD
 	var hasCompare, parent,
+=======
+	var hasCompare, subWindow,
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 		doc = node ? node.ownerDocument || node : preferredDoc;
 
 	// Return early if doc is invalid or already selected
@@ -506,6 +635,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 	// Support: IE 9-11, Edge
 	// Accessing iframe documents after unload throws "permission denied" errors (jQuery #13936)
+<<<<<<< HEAD
 	if ( (parent = document.defaultView) && parent.top !== parent ) {
 		// Support: IE 11
 		if ( parent.addEventListener ) {
@@ -514,6 +644,18 @@ setDocument = Sizzle.setDocument = function( node ) {
 		// Support: IE 9 - 10 only
 		} else if ( parent.attachEvent ) {
 			parent.attachEvent( "onunload", unloadHandler );
+=======
+	if ( preferredDoc !== document &&
+		(subWindow = document.defaultView) && subWindow.top !== subWindow ) {
+
+		// Support: IE 11, Edge
+		if ( subWindow.addEventListener ) {
+			subWindow.addEventListener( "unload", unloadHandler, false );
+
+		// Support: IE 9 - 10 only
+		} else if ( subWindow.attachEvent ) {
+			subWindow.attachEvent( "onunload", unloadHandler );
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 		}
 	}
 
@@ -523,18 +665,30 @@ setDocument = Sizzle.setDocument = function( node ) {
 	// Support: IE<8
 	// Verify that getAttribute really returns attributes and not properties
 	// (excepting IE8 booleans)
+<<<<<<< HEAD
 	support.attributes = assert(function( div ) {
 		div.className = "i";
 		return !div.getAttribute("className");
+=======
+	support.attributes = assert(function( el ) {
+		el.className = "i";
+		return !el.getAttribute("className");
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	});
 
 	/* getElement(s)By*
 	---------------------------------------------------------------------- */
 
 	// Check if getElementsByTagName("*") returns only elements
+<<<<<<< HEAD
 	support.getElementsByTagName = assert(function( div ) {
 		div.appendChild( document.createComment("") );
 		return !div.getElementsByTagName("*").length;
+=======
+	support.getElementsByTagName = assert(function( el ) {
+		el.appendChild( document.createComment("") );
+		return !el.getElementsByTagName("*").length;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	});
 
 	// Support: IE<9
@@ -542,10 +696,17 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 	// Support: IE<10
 	// Check if getElementById returns elements by name
+<<<<<<< HEAD
 	// The broken getElementById methods don't pick up programatically-set names,
 	// so use a roundabout getElementsByName test
 	support.getById = assert(function( div ) {
 		docElem.appendChild( div ).id = expando;
+=======
+	// The broken getElementById methods don't pick up programmatically-set names,
+	// so use a roundabout getElementsByName test
+	support.getById = assert(function( el ) {
+		docElem.appendChild( el ).id = expando;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 		return !document.getElementsByName || !document.getElementsByName( expando ).length;
 	});
 
@@ -629,77 +790,142 @@ setDocument = Sizzle.setDocument = function( node ) {
 	// We allow this because of a bug in IE8/9 that throws an error
 	// whenever `document.activeElement` is accessed on an iframe
 	// So, we allow :focus to pass through QSA all the time to avoid the IE error
+<<<<<<< HEAD
 	// See http://bugs.jquery.com/ticket/13378
+=======
+	// See https://bugs.jquery.com/ticket/13378
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	rbuggyQSA = [];
 
 	if ( (support.qsa = rnative.test( document.querySelectorAll )) ) {
 		// Build QSA regex
 		// Regex strategy adopted from Diego Perini
+<<<<<<< HEAD
 		assert(function( div ) {
+=======
+		assert(function( el ) {
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			// Select is set to empty string on purpose
 			// This is to test IE's treatment of not explicitly
 			// setting a boolean content attribute,
 			// since its presence should be enough
+<<<<<<< HEAD
 			// http://bugs.jquery.com/ticket/12359
 			docElem.appendChild( div ).innerHTML = "<a id='" + expando + "'></a>" +
+=======
+			// https://bugs.jquery.com/ticket/12359
+			docElem.appendChild( el ).innerHTML = "<a id='" + expando + "'></a>" +
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				"<select id='" + expando + "-\r\\' msallowcapture=''>" +
 				"<option selected=''></option></select>";
 
 			// Support: IE8, Opera 11-12.16
 			// Nothing should be selected when empty strings follow ^= or $= or *=
 			// The test attribute must be unknown in Opera but "safe" for WinRT
+<<<<<<< HEAD
 			// http://msdn.microsoft.com/en-us/library/ie/hh465388.aspx#attribute_section
 			if ( div.querySelectorAll("[msallowcapture^='']").length ) {
+=======
+			// https://msdn.microsoft.com/en-us/library/ie/hh465388.aspx#attribute_section
+			if ( el.querySelectorAll("[msallowcapture^='']").length ) {
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				rbuggyQSA.push( "[*^$]=" + whitespace + "*(?:''|\"\")" );
 			}
 
 			// Support: IE8
 			// Boolean attributes and "value" are not treated correctly
+<<<<<<< HEAD
 			if ( !div.querySelectorAll("[selected]").length ) {
+=======
+			if ( !el.querySelectorAll("[selected]").length ) {
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				rbuggyQSA.push( "\\[" + whitespace + "*(?:value|" + booleans + ")" );
 			}
 
 			// Support: Chrome<29, Android<4.4, Safari<7.0+, iOS<7.0+, PhantomJS<1.9.8+
+<<<<<<< HEAD
 			if ( !div.querySelectorAll( "[id~=" + expando + "-]" ).length ) {
+=======
+			if ( !el.querySelectorAll( "[id~=" + expando + "-]" ).length ) {
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				rbuggyQSA.push("~=");
 			}
 
 			// Webkit/Opera - :checked should return selected option elements
 			// http://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
 			// IE8 throws error here and will not see later tests
+<<<<<<< HEAD
 			if ( !div.querySelectorAll(":checked").length ) {
+=======
+			if ( !el.querySelectorAll(":checked").length ) {
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				rbuggyQSA.push(":checked");
 			}
 
 			// Support: Safari 8+, iOS 8+
 			// https://bugs.webkit.org/show_bug.cgi?id=136851
+<<<<<<< HEAD
 			// In-page `selector#id sibing-combinator selector` fails
 			if ( !div.querySelectorAll( "a#" + expando + "+*" ).length ) {
+=======
+			// In-page `selector#id sibling-combinator selector` fails
+			if ( !el.querySelectorAll( "a#" + expando + "+*" ).length ) {
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				rbuggyQSA.push(".#.+[+~]");
 			}
 		});
 
+<<<<<<< HEAD
 		assert(function( div ) {
+=======
+		assert(function( el ) {
+			el.innerHTML = "<a href='' disabled='disabled'></a>" +
+				"<select disabled='disabled'><option/></select>";
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			// Support: Windows 8 Native Apps
 			// The type and name attributes are restricted during .innerHTML assignment
 			var input = document.createElement("input");
 			input.setAttribute( "type", "hidden" );
+<<<<<<< HEAD
 			div.appendChild( input ).setAttribute( "name", "D" );
 
 			// Support: IE8
 			// Enforce case-sensitivity of name attribute
 			if ( div.querySelectorAll("[name=d]").length ) {
+=======
+			el.appendChild( input ).setAttribute( "name", "D" );
+
+			// Support: IE8
+			// Enforce case-sensitivity of name attribute
+			if ( el.querySelectorAll("[name=d]").length ) {
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				rbuggyQSA.push( "name" + whitespace + "*[*^$|!~]?=" );
 			}
 
 			// FF 3.5 - :enabled/:disabled and hidden elements (hidden elements are still enabled)
 			// IE8 throws error here and will not see later tests
+<<<<<<< HEAD
 			if ( !div.querySelectorAll(":enabled").length ) {
+=======
+			if ( el.querySelectorAll(":enabled").length !== 2 ) {
+				rbuggyQSA.push( ":enabled", ":disabled" );
+			}
+
+			// Support: IE9-11+
+			// IE's :disabled selector does not pick up the children of disabled fieldsets
+			docElem.appendChild( el ).disabled = true;
+			if ( el.querySelectorAll(":disabled").length !== 2 ) {
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				rbuggyQSA.push( ":enabled", ":disabled" );
 			}
 
 			// Opera 10-11 does not throw on post-comma invalid pseudos
+<<<<<<< HEAD
 			div.querySelectorAll("*,:x");
+=======
+			el.querySelectorAll("*,:x");
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			rbuggyQSA.push(",.*:");
 		});
 	}
@@ -710,6 +936,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 		docElem.oMatchesSelector ||
 		docElem.msMatchesSelector) )) ) {
 
+<<<<<<< HEAD
 		assert(function( div ) {
 			// Check to see if it's possible to do matchesSelector
 			// on a disconnected node (IE 9)
@@ -718,6 +945,16 @@ setDocument = Sizzle.setDocument = function( node ) {
 			// This should fail with an exception
 			// Gecko does not error, returns false instead
 			matches.call( div, "[s!='']:x" );
+=======
+		assert(function( el ) {
+			// Check to see if it's possible to do matchesSelector
+			// on a disconnected node (IE 9)
+			support.disconnectedMatch = matches.call( el, "*" );
+
+			// This should fail with an exception
+			// Gecko does not error, returns false instead
+			matches.call( el, "[s!='']:x" );
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			rbuggyMatches.push( "!=", pseudos );
 		});
 	}
@@ -919,6 +1156,13 @@ Sizzle.attr = function( elem, name ) {
 				null;
 };
 
+<<<<<<< HEAD
+=======
+Sizzle.escape = function( sel ) {
+	return (sel + "").replace( rcssescape, fcssescape );
+};
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 Sizzle.error = function( msg ) {
 	throw new Error( "Syntax error, unrecognized expression: " + msg );
 };
@@ -1386,6 +1630,7 @@ Expr = Sizzle.selectors = {
 		},
 
 		// Boolean properties
+<<<<<<< HEAD
 		"enabled": function( elem ) {
 			return elem.disabled === false;
 		},
@@ -1393,6 +1638,10 @@ Expr = Sizzle.selectors = {
 		"disabled": function( elem ) {
 			return elem.disabled === true;
 		},
+=======
+		"enabled": createDisabledPseudo( false ),
+		"disabled": createDisabledPseudo( true ),
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 		"checked": function( elem ) {
 			// In CSS3, :checked should return both checked and selected elements
@@ -1594,7 +1843,13 @@ function toSelector( tokens ) {
 
 function addCombinator( matcher, combinator, base ) {
 	var dir = combinator.dir,
+<<<<<<< HEAD
 		checkNonElements = base && dir === "parentNode",
+=======
+		skip = combinator.next,
+		key = skip || dir,
+		checkNonElements = base && key === "parentNode",
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 		doneName = done++;
 
 	return combinator.first ?
@@ -1630,14 +1885,24 @@ function addCombinator( matcher, combinator, base ) {
 						// Defend against cloned attroperties (jQuery gh-1709)
 						uniqueCache = outerCache[ elem.uniqueID ] || (outerCache[ elem.uniqueID ] = {});
 
+<<<<<<< HEAD
 						if ( (oldCache = uniqueCache[ dir ]) &&
+=======
+						if ( skip && skip === elem.nodeName.toLowerCase() ) {
+							elem = elem[ dir ] || elem;
+						} else if ( (oldCache = uniqueCache[ key ]) &&
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 							oldCache[ 0 ] === dirruns && oldCache[ 1 ] === doneName ) {
 
 							// Assign to newCache so results back-propagate to previous elements
 							return (newCache[ 2 ] = oldCache[ 2 ]);
 						} else {
 							// Reuse newcache so results back-propagate to previous elements
+<<<<<<< HEAD
 							uniqueCache[ dir ] = newCache;
+=======
+							uniqueCache[ key ] = newCache;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 							// A match means we're done; a fail means we have to keep checking
 							if ( (newCache[ 2 ] = matcher( elem, context, xml )) ) {
@@ -2080,17 +2345,30 @@ setDocument();
 
 // Support: Webkit<537.32 - Safari 6.0.3/Chrome 25 (fixed in Chrome 27)
 // Detached nodes confoundingly follow *each other*
+<<<<<<< HEAD
 support.sortDetached = assert(function( div1 ) {
 	// Should return 1, but returns 4 (following)
 	return div1.compareDocumentPosition( document.createElement("div") ) & 1;
+=======
+support.sortDetached = assert(function( el ) {
+	// Should return 1, but returns 4 (following)
+	return el.compareDocumentPosition( document.createElement("fieldset") ) & 1;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 });
 
 // Support: IE<8
 // Prevent attribute/property "interpolation"
+<<<<<<< HEAD
 // http://msdn.microsoft.com/en-us/library/ms536429%28VS.85%29.aspx
 if ( !assert(function( div ) {
 	div.innerHTML = "<a href='#'></a>";
 	return div.firstChild.getAttribute("href") === "#" ;
+=======
+// https://msdn.microsoft.com/en-us/library/ms536429%28VS.85%29.aspx
+if ( !assert(function( el ) {
+	el.innerHTML = "<a href='#'></a>";
+	return el.firstChild.getAttribute("href") === "#" ;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 }) ) {
 	addHandle( "type|href|height|width", function( elem, name, isXML ) {
 		if ( !isXML ) {
@@ -2101,10 +2379,17 @@ if ( !assert(function( div ) {
 
 // Support: IE<9
 // Use defaultValue in place of getAttribute("value")
+<<<<<<< HEAD
 if ( !support.attributes || !assert(function( div ) {
 	div.innerHTML = "<input/>";
 	div.firstChild.setAttribute( "value", "" );
 	return div.firstChild.getAttribute( "value" ) === "";
+=======
+if ( !support.attributes || !assert(function( el ) {
+	el.innerHTML = "<input/>";
+	el.firstChild.setAttribute( "value", "" );
+	return el.firstChild.getAttribute( "value" ) === "";
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 }) ) {
 	addHandle( "value", function( elem, name, isXML ) {
 		if ( !isXML && elem.nodeName.toLowerCase() === "input" ) {
@@ -2115,8 +2400,13 @@ if ( !support.attributes || !assert(function( div ) {
 
 // Support: IE<9
 // Use getAttributeNode to fetch booleans when getAttribute lies
+<<<<<<< HEAD
 if ( !assert(function( div ) {
 	return div.getAttribute("disabled") == null;
+=======
+if ( !assert(function( el ) {
+	return el.getAttribute("disabled") == null;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 }) ) {
 	addHandle( booleans, function( elem, name, isXML ) {
 		var val;
@@ -2130,6 +2420,19 @@ if ( !assert(function( div ) {
 }
 
 // EXPOSE
+<<<<<<< HEAD
+=======
+var _sizzle = window.Sizzle;
+
+Sizzle.noConflict = function() {
+	if ( window.Sizzle === Sizzle ) {
+		window.Sizzle = _sizzle;
+	}
+
+	return Sizzle;
+};
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 if ( typeof define === "function" && define.amd ) {
 	define(function() { return Sizzle; });
 // Sizzle requires that there be a global window in Common-JS like environments

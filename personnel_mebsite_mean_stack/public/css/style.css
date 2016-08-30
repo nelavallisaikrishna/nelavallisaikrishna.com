@@ -58,8 +58,20 @@ body a:hover{
 	position: relative;
 }
 .banner-info{
-	background: url(/img/cover.jpg)repeat 0px 0px;
+	background: url(/img/clr.jpeg)repeat 0px 0px;
    height: 500px;
+    background-position: top left;
+    -webkit-animation: mymove 3s; /* Chrome, Safari, Opera */
+    animation: mymove 3s;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    80% {background-position:center;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    80% {background-position:center;}
 }
 .shadeBack{
     height: 500px;

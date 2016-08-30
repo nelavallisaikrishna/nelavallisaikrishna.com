@@ -5,6 +5,11 @@ define( [
 	"../core/init"
 ], function( jQuery, rnotwhite, dataPriv ) {
 
+<<<<<<< HEAD
+=======
+"use strict";
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 var rclass = /[\t\r\n\f]/g;
 
 function getClass( elem ) {

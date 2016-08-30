@@ -4,6 +4,11 @@ define( [
 	"./var/acceptData"
 ], function( jQuery, rnotwhite, acceptData ) {
 
+<<<<<<< HEAD
+=======
+"use strict";
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 function Data() {
 	this.expando = jQuery.expando + Data.uid++;
 }
@@ -12,6 +17,7 @@ Data.uid = 1;
 
 Data.prototype = {
 
+<<<<<<< HEAD
 	register: function( owner, initial ) {
 		var value = initial || {};
 
@@ -41,6 +47,10 @@ Data.prototype = {
 			return {};
 		}
 
+=======
+	cache: function( owner ) {
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 		// Check if the owner object already has a cache
 		var value = owner[ this.expando ];
 
@@ -77,15 +87,25 @@ Data.prototype = {
 			cache = this.cache( owner );
 
 		// Handle: [ owner, key, value ] args
+<<<<<<< HEAD
 		if ( typeof data === "string" ) {
 			cache[ data ] = value;
+=======
+		// Always use camelCase key (gh-2257)
+		if ( typeof data === "string" ) {
+			cache[ jQuery.camelCase( data ) ] = value;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 		// Handle: [ owner, { properties } ] args
 		} else {
 
 			// Copy the properties one-by-one to the cache object
 			for ( prop in data ) {
+<<<<<<< HEAD
 				cache[ prop ] = data[ prop ];
+=======
+				cache[ jQuery.camelCase( prop ) ] = data[ prop ];
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			}
 		}
 		return cache;
@@ -93,10 +113,18 @@ Data.prototype = {
 	get: function( owner, key ) {
 		return key === undefined ?
 			this.cache( owner ) :
+<<<<<<< HEAD
 			owner[ this.expando ] && owner[ this.expando ][ key ];
 	},
 	access: function( owner, key, value ) {
 		var stored;
+=======
+
+			// Always use camelCase key (gh-2257)
+			owner[ this.expando ] && owner[ this.expando ][ jQuery.camelCase( key ) ];
+	},
+	access: function( owner, key, value ) {
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 		// In cases where either:
 		//
@@ -112,10 +140,14 @@ Data.prototype = {
 		if ( key === undefined ||
 				( ( key && typeof key === "string" ) && value === undefined ) ) {
 
+<<<<<<< HEAD
 			stored = this.get( owner, key );
 
 			return stored !== undefined ?
 				stored : this.get( owner, jQuery.camelCase( key ) );
+=======
+			return this.get( owner, key );
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 		}
 
 		// When the key is not a string, or both a key and value
@@ -131,21 +163,30 @@ Data.prototype = {
 		return value !== undefined ? value : key;
 	},
 	remove: function( owner, key ) {
+<<<<<<< HEAD
 		var i, name, camel,
+=======
+		var i,
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			cache = owner[ this.expando ];
 
 		if ( cache === undefined ) {
 			return;
 		}
 
+<<<<<<< HEAD
 		if ( key === undefined ) {
 			this.register( owner );
 
 		} else {
+=======
+		if ( key !== undefined ) {
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 			// Support array or space separated string of keys
 			if ( jQuery.isArray( key ) ) {
 
+<<<<<<< HEAD
 				// If "name" is an array of keys...
 				// When data is initially created, via ("key", "val") signature,
 				// keys will be converted to camelCase.
@@ -173,16 +214,42 @@ Data.prototype = {
 
 			while ( i-- ) {
 				delete cache[ name[ i ] ];
+=======
+				// If key is an array of keys...
+				// We always set camelCase keys, so remove that.
+				key = key.map( jQuery.camelCase );
+			} else {
+				key = jQuery.camelCase( key );
+
+				// If a key with the spaces exists, use it.
+				// Otherwise, create an array by matching non-whitespace
+				key = key in cache ?
+					[ key ] :
+					( key.match( rnotwhite ) || [] );
+			}
+
+			i = key.length;
+
+			while ( i-- ) {
+				delete cache[ key[ i ] ];
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			}
 		}
 
 		// Remove the expando if there's no more data
 		if ( key === undefined || jQuery.isEmptyObject( cache ) ) {
 
+<<<<<<< HEAD
 			// Support: Chrome <= 35-45+
 			// Webkit & Blink performance suffers when deleting properties
 			// from DOM nodes, so set to undefined instead
 			// https://code.google.com/p/chromium/issues/detail?id=378607
+=======
+			// Support: Chrome <=35 - 45
+			// Webkit & Blink performance suffers when deleting properties
+			// from DOM nodes, so set to undefined instead
+			// https://bugs.chromium.org/p/chromium/issues/detail?id=378607 (bug restricted)
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			if ( owner.nodeType ) {
 				owner[ this.expando ] = undefined;
 			} else {

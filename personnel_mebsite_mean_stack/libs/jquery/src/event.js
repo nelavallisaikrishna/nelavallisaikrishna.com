@@ -1,13 +1,23 @@
 define( [
 	"./core",
 	"./var/document",
+<<<<<<< HEAD
+=======
+	"./var/documentElement",
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	"./var/rnotwhite",
 	"./var/slice",
 	"./data/var/dataPriv",
 
 	"./core/init",
 	"./selector"
+<<<<<<< HEAD
 ], function( jQuery, document, rnotwhite, slice, dataPriv ) {
+=======
+], function( jQuery, document, documentElement, rnotwhite, slice, dataPriv ) {
+
+"use strict";
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 var
 	rkeyEvent = /^key/,
@@ -22,7 +32,11 @@ function returnFalse() {
 	return false;
 }
 
+<<<<<<< HEAD
 // Support: IE9
+=======
+// Support: IE <=9 only
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 // See #13393 for more info
 function safeActiveElement() {
 	try {
@@ -118,6 +132,15 @@ jQuery.event = {
 			selector = handleObjIn.selector;
 		}
 
+<<<<<<< HEAD
+=======
+		// Ensure that invalid selectors throw exceptions at attach time
+		// Evaluate against documentElement in case elem is a non-element node (e.g., document)
+		if ( selector ) {
+			jQuery.find.matchesSelector( documentElement, selector );
+		}
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 		// Make sure that the handler has a unique ID, used to find/remove it later
 		if ( !handler.guid ) {
 			handler.guid = jQuery.guid++;
@@ -281,6 +304,7 @@ jQuery.event = {
 		}
 	},
 
+<<<<<<< HEAD
 	dispatch: function( event ) {
 
 		// Make a writable jQuery.Event from the native event object
@@ -289,11 +313,28 @@ jQuery.event = {
 		var i, j, ret, matched, handleObj,
 			handlerQueue = [],
 			args = slice.call( arguments ),
+=======
+	dispatch: function( nativeEvent ) {
+
+		// Make a writable jQuery.Event from the native event object
+		var event = jQuery.event.fix( nativeEvent );
+
+		var i, j, ret, matched, handleObj, handlerQueue,
+			args = new Array( arguments.length ),
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			handlers = ( dataPriv.get( this, "events" ) || {} )[ event.type ] || [],
 			special = jQuery.event.special[ event.type ] || {};
 
 		// Use the fix-ed jQuery.Event rather than the (read-only) native event
 		args[ 0 ] = event;
+<<<<<<< HEAD
+=======
+
+		for ( i = 1; i < arguments.length; i++ ) {
+			args[ i ] = arguments[ i ];
+		}
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 		event.delegateTarget = this;
 
 		// Call the preDispatch hook for the mapped type, and let it bail if desired
@@ -347,11 +388,19 @@ jQuery.event = {
 			delegateCount = handlers.delegateCount,
 			cur = event.target;
 
+<<<<<<< HEAD
 		// Support (at least): Chrome, IE9
 		// Find delegate handlers
 		// Black-hole SVG <use> instance trees (#13180)
 		//
 		// Support: Firefox<=42+
+=======
+		// Support: IE <=9
+		// Find delegate handlers
+		// Black-hole SVG <use> instance trees (#13180)
+		//
+		// Support: Firefox <=42
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 		// Avoid non-left-click in FF but don't block IE radio events (#3861, gh-2343)
 		if ( delegateCount && cur.nodeType &&
 			( event.type !== "click" || isNaN( event.button ) || event.button < 1 ) ) {
@@ -392,6 +441,7 @@ jQuery.event = {
 		return handlerQueue;
 	},
 
+<<<<<<< HEAD
 	// Includes some event props shared by KeyEvent and MouseEvent
 	props: ( "altKey bubbles cancelable ctrlKey currentTarget detail eventPhase " +
 		"metaKey relatedTarget shiftKey target timeStamp view which" ).split( " " ),
@@ -482,6 +532,40 @@ jQuery.event = {
 		}
 
 		return fixHook.filter ? fixHook.filter( event, originalEvent ) : event;
+=======
+	addProp: function( name, hook ) {
+		Object.defineProperty( jQuery.Event.prototype, name, {
+			enumerable: true,
+			configurable: true,
+
+			get: jQuery.isFunction( hook ) ?
+				function() {
+					if ( this.originalEvent ) {
+							return hook( this.originalEvent );
+					}
+				} :
+				function() {
+					if ( this.originalEvent ) {
+							return this.originalEvent[ name ];
+					}
+				},
+
+			set: function( value ) {
+				Object.defineProperty( this, name, {
+					enumerable: true,
+					configurable: true,
+					writable: true,
+					value: value
+				} );
+			}
+		} );
+	},
+
+	fix: function( originalEvent ) {
+		return originalEvent[ jQuery.expando ] ?
+			originalEvent :
+			new jQuery.Event( originalEvent );
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	},
 
 	special: {
@@ -564,11 +648,28 @@ jQuery.Event = function( src, props ) {
 		this.isDefaultPrevented = src.defaultPrevented ||
 				src.defaultPrevented === undefined &&
 
+<<<<<<< HEAD
 				// Support: Android<4.0
+=======
+				// Support: Android <=2.3 only
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				src.returnValue === false ?
 			returnTrue :
 			returnFalse;
 
+<<<<<<< HEAD
+=======
+		// Create target properties
+		// Support: Safari <=6 - 7 only
+		// Target should not be a text node (#504, #13143)
+		this.target = ( src.target && src.target.nodeType === 3 ) ?
+			src.target.parentNode :
+			src.target;
+
+		this.currentTarget = src.currentTarget;
+		this.relatedTarget = src.relatedTarget;
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	// Event type
 	} else {
 		this.type = src;
@@ -587,7 +688,11 @@ jQuery.Event = function( src, props ) {
 };
 
 // jQuery.Event is based on DOM3 Events as specified by the ECMAScript Language Binding
+<<<<<<< HEAD
 // http://www.w3.org/TR/2003/WD-DOM-Level-3-Events-20030331/ecma-script-binding.html
+=======
+// https://www.w3.org/TR/2003/WD-DOM-Level-3-Events-20030331/ecma-script-binding.html
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 jQuery.Event.prototype = {
 	constructor: jQuery.Event,
 	isDefaultPrevented: returnFalse,
@@ -626,13 +731,69 @@ jQuery.Event.prototype = {
 	}
 };
 
+<<<<<<< HEAD
+=======
+// Includes all common event props including KeyEvent and MouseEvent specific props
+jQuery.each( {
+	altKey: true,
+	bubbles: true,
+	cancelable: true,
+	changedTouches: true,
+	ctrlKey: true,
+	detail: true,
+	eventPhase: true,
+	metaKey: true,
+	pageX: true,
+	pageY: true,
+	shiftKey: true,
+	view: true,
+	"char": true,
+	charCode: true,
+	key: true,
+	keyCode: true,
+	button: true,
+	buttons: true,
+	clientX: true,
+	clientY: true,
+	offsetX: true,
+	offsetY: true,
+	pointerId: true,
+	pointerType: true,
+	screenX: true,
+	screenY: true,
+	targetTouches: true,
+	toElement: true,
+	touches: true,
+
+	which: function( event ) {
+		var button = event.button;
+
+		// Add which for key events
+		if ( event.which == null && rkeyEvent.test( event.type ) ) {
+			return event.charCode != null ? event.charCode : event.keyCode;
+		}
+
+		// Add which for click: 1 === left; 2 === middle; 3 === right
+		if ( !event.which && button !== undefined && rmouseEvent.test( event.type ) ) {
+			return ( button & 1 ? 1 : ( button & 2 ? 3 : ( button & 4 ? 2 : 0 ) ) );
+		}
+
+		return event.which;
+	}
+}, jQuery.event.addProp );
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 // Create mouseenter/leave events using mouseover/out and event-time checks
 // so that event delegation works in jQuery.
 // Do the same for pointerenter/pointerleave and pointerover/pointerout
 //
 // Support: Safari 7 only
 // Safari sends mouseenter too often; see:
+<<<<<<< HEAD
 // https://code.google.com/p/chromium/issues/detail?id=470258
+=======
+// https://bugs.chromium.org/p/chromium/issues/detail?id=470258
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 // for the description of the bug (it existed in older Chrome versions as well).
 jQuery.each( {
 	mouseenter: "mouseover",
@@ -663,6 +824,10 @@ jQuery.each( {
 } );
 
 jQuery.fn.extend( {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	on: function( types, selector, data, fn ) {
 		return on( this, types, selector, data, fn );
 	},

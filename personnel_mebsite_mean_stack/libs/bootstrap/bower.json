@@ -29,6 +29,10 @@
     "test-infra"
   ],
   "dependencies": {
+<<<<<<< HEAD
     "jquery": "1.9.1 - 2"
+=======
+    "jquery": "1.9.1 - 3"
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
   }
 }

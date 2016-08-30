@@ -1,5 +1,10 @@
 define( function() {
 
+<<<<<<< HEAD
+=======
+"use strict";
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 // A method for quickly swapping in/out CSS properties to get correct calculations.
 return function( elem, options, callback, args ) {
 	var ret, name,

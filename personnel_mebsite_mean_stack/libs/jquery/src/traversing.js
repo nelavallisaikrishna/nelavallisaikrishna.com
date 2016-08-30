@@ -9,6 +9,11 @@ define( [
 	"./selector"
 ], function( jQuery, indexOf, dir, siblings, rneedsContext ) {
 
+<<<<<<< HEAD
+=======
+"use strict";
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 var rparentsprev = /^(?:parents|prev(?:Until|All))/,
 
 	// Methods guaranteed to produce a unique set when starting from a unique set
@@ -39,6 +44,7 @@ jQuery.fn.extend( {
 			i = 0,
 			l = this.length,
 			matched = [],
+<<<<<<< HEAD
 			pos = rneedsContext.test( selectors ) || typeof selectors !== "string" ?
 				jQuery( selectors, context || this.context ) :
 				0;
@@ -56,6 +62,26 @@ jQuery.fn.extend( {
 
 					matched.push( cur );
 					break;
+=======
+			targets = typeof selectors !== "string" && jQuery( selectors );
+
+		// Positional selectors never match, since there's no _selection_ context
+		if ( !rneedsContext.test( selectors ) ) {
+			for ( ; i < l; i++ ) {
+				for ( cur = this[ i ]; cur && cur !== context; cur = cur.parentNode ) {
+
+					// Always skip document fragments
+					if ( cur.nodeType < 11 && ( targets ?
+						targets.index( cur ) > -1 :
+
+						// Don't pass non-elements to Sizzle
+						cur.nodeType === 1 &&
+							jQuery.find.matchesSelector( cur, selectors ) ) ) {
+
+						matched.push( cur );
+						break;
+					}
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				}
 			}
 		}

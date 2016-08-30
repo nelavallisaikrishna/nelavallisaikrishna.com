@@ -7,21 +7,36 @@ define( [
 	"./var/rcssNum",
 	"./css/var/rnumnonpx",
 	"./css/var/cssExpand",
+<<<<<<< HEAD
 	"./css/var/isHidden",
+=======
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	"./css/var/getStyles",
 	"./css/var/swap",
 	"./css/curCSS",
 	"./css/adjustCSS",
+<<<<<<< HEAD
 	"./css/defaultDisplay",
 	"./css/addGetHookIf",
 	"./css/support",
 	"./data/var/dataPriv",
+=======
+	"./css/addGetHookIf",
+	"./css/support",
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 	"./core/init",
 	"./core/ready",
 	"./selector" // contains
+<<<<<<< HEAD
 ], function( jQuery, pnum, access, rmargin, document, rcssNum, rnumnonpx, cssExpand, isHidden,
 	getStyles, swap, curCSS, adjustCSS, defaultDisplay, addGetHookIf, support, dataPriv ) {
+=======
+], function( jQuery, pnum, access, rmargin, document, rcssNum, rnumnonpx, cssExpand,
+	getStyles, swap, curCSS, adjustCSS, addGetHookIf, support ) {
+
+"use strict";
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 var
 
@@ -29,14 +44,21 @@ var
 	// except "table", "table-cell", or "table-caption"
 	// See here for display values: https://developer.mozilla.org/en-US/docs/CSS/display
 	rdisplayswap = /^(none|table(?!-c[ea]).+)/,
+<<<<<<< HEAD
 
+=======
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	cssShow = { position: "absolute", visibility: "hidden", display: "block" },
 	cssNormalTransform = {
 		letterSpacing: "0",
 		fontWeight: "400"
 	},
 
+<<<<<<< HEAD
 	cssPrefixes = [ "Webkit", "O", "Moz", "ms" ],
+=======
+	cssPrefixes = [ "Webkit", "Moz", "ms" ],
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	emptyStyle = document.createElement( "div" ).style;
 
 // Return a css property mapped to a potentially vendor prefixed property
@@ -118,11 +140,26 @@ function augmentWidthOrHeight( elem, name, extra, isBorderBox, styles ) {
 function getWidthOrHeight( elem, name, extra ) {
 
 	// Start with offset property, which is equivalent to the border-box value
+<<<<<<< HEAD
 	var valueIsBorderBox = true,
 		val = name === "width" ? elem.offsetWidth : elem.offsetHeight,
 		styles = getStyles( elem ),
 		isBorderBox = jQuery.css( elem, "boxSizing", false, styles ) === "border-box";
 
+=======
+	var val,
+		valueIsBorderBox = true,
+		styles = getStyles( elem ),
+		isBorderBox = jQuery.css( elem, "boxSizing", false, styles ) === "border-box";
+
+	// Support: IE <=11 only
+	// Running getBoundingClientRect on a disconnected node
+	// in IE throws an error.
+	if ( elem.getClientRects().length ) {
+		val = elem.getBoundingClientRect()[ name ];
+	}
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	// Some non-html elements return undefined for offsetWidth, so check for null/undefined
 	// svg - https://bugzilla.mozilla.org/show_bug.cgi?id=649285
 	// MathML - https://bugzilla.mozilla.org/show_bug.cgi?id=491668
@@ -160,6 +197,7 @@ function getWidthOrHeight( elem, name, extra ) {
 	) + "px";
 }
 
+<<<<<<< HEAD
 function showHide( elements, show ) {
 	var display, elem, hidden,
 		values = [],
@@ -220,6 +258,8 @@ function showHide( elements, show ) {
 	return elements;
 }
 
+=======
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 jQuery.extend( {
 
 	// Add in style property hooks for overriding the default
@@ -301,7 +341,10 @@ jQuery.extend( {
 				value += ret && ret[ 3 ] || ( jQuery.cssNumber[ origName ] ? "" : "px" );
 			}
 
+<<<<<<< HEAD
 			// Support: IE9-11+
+=======
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			// background-* props affect original clone's values
 			if ( !support.clearCloneStyle && value === "" && name.indexOf( "background" ) === 0 ) {
 				style[ name ] = "inherit";
@@ -371,7 +414,18 @@ jQuery.each( [ "height", "width" ], function( i, name ) {
 				// Certain elements can have dimension info if we invisibly show them
 				// but it must have a current display style that would benefit
 				return rdisplayswap.test( jQuery.css( elem, "display" ) ) &&
+<<<<<<< HEAD
 					elem.offsetWidth === 0 ?
+=======
+
+					// Support: Safari 8+
+					// Table columns in Safari have non-zero offsetWidth & zero
+					// getBoundingClientRect().width unless display is changed.
+					// Support: IE <=11 only
+					// Running getBoundingClientRect on a disconnected node
+					// in IE throws an error.
+					( !elem.getClientRects().length || !elem.getBoundingClientRect().width ) ?
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 						swap( elem, cssShow, function() {
 							return getWidthOrHeight( elem, name, extra );
 						} ) :
@@ -416,6 +470,7 @@ jQuery.cssHooks.marginLeft = addGetHookIf( support.reliableMarginLeft,
 	}
 );
 
+<<<<<<< HEAD
 // Support: Android 2.3
 jQuery.cssHooks.marginRight = addGetHookIf( support.reliableMarginRight,
 	function( elem, computed ) {
@@ -426,6 +481,8 @@ jQuery.cssHooks.marginRight = addGetHookIf( support.reliableMarginRight,
 	}
 );
 
+=======
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 // These hooks are used by animate to expand properties
 jQuery.each( {
 	margin: "",
@@ -476,6 +533,7 @@ jQuery.fn.extend( {
 				jQuery.style( elem, name, value ) :
 				jQuery.css( elem, name );
 		}, name, value, arguments.length > 1 );
+<<<<<<< HEAD
 	},
 	show: function() {
 		return showHide( this, true );
@@ -495,6 +553,8 @@ jQuery.fn.extend( {
 				jQuery( this ).hide();
 			}
 		} );
+=======
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	}
 } );
 

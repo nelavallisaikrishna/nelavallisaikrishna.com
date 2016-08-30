@@ -2,6 +2,11 @@ define( [
 	"./core"
 ], function( jQuery ) {
 
+<<<<<<< HEAD
+=======
+"use strict";
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 jQuery.fn.extend( {
 
 	bind: function( types, data, fn ) {
@@ -20,6 +25,7 @@ jQuery.fn.extend( {
 		return arguments.length === 1 ?
 			this.off( selector, "**" ) :
 			this.off( types, selector || "**", fn );
+<<<<<<< HEAD
 	},
 	size: function() {
 		return this.length;
@@ -30,3 +36,11 @@ jQuery.fn.andSelf = jQuery.fn.addBack;
 
 } );
 
+=======
+	}
+} );
+
+jQuery.parseJSON = JSON.parse;
+
+} );
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988

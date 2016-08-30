@@ -6,7 +6,13 @@ define( [
 	"./attributes/prop"
 ], function( jQuery, rcheckableType ) {
 
+<<<<<<< HEAD
 var r20 = /%20/g,
+=======
+"use strict";
+
+var
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	rbracket = /\[\]$/,
 	rCRLF = /\r?\n/g,
 	rsubmitterTypes = /^(?:submit|button|image|reset|file)$/i,
@@ -55,6 +61,7 @@ function buildParams( prefix, obj, traditional, add ) {
 jQuery.param = function( a, traditional ) {
 	var prefix,
 		s = [],
+<<<<<<< HEAD
 		add = function( key, value ) {
 
 			// If value is a function, invoke it and return its value
@@ -66,6 +73,18 @@ jQuery.param = function( a, traditional ) {
 	if ( traditional === undefined ) {
 		traditional = jQuery.ajaxSettings && jQuery.ajaxSettings.traditional;
 	}
+=======
+		add = function( key, valueOrFunction ) {
+
+			// If value is a function, invoke it and use its return value
+			var value = jQuery.isFunction( valueOrFunction ) ?
+				valueOrFunction() :
+				valueOrFunction;
+
+			s[ s.length ] = encodeURIComponent( key ) + "=" +
+				encodeURIComponent( value == null ? "" : value );
+		};
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 	// If an array was passed in, assume that it is an array of form elements.
 	if ( jQuery.isArray( a ) || ( a.jquery && !jQuery.isPlainObject( a ) ) ) {
@@ -85,7 +104,11 @@ jQuery.param = function( a, traditional ) {
 	}
 
 	// Return the resulting serialization
+<<<<<<< HEAD
 	return s.join( "&" ).replace( r20, "+" );
+=======
+	return s.join( "&" );
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 };
 
 jQuery.fn.extend( {

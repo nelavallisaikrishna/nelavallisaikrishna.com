@@ -13,6 +13,11 @@ define( [
 	"./selector" // contains
 ], function( jQuery, access, document, documentElement, rnumnonpx, curCSS, addGetHookIf, support ) {
 
+<<<<<<< HEAD
+=======
+"use strict";
+
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 /**
  * Gets a window from an element
  */
@@ -74,6 +79,11 @@ jQuery.offset = {
 
 jQuery.fn.extend( {
 	offset: function( options ) {
+<<<<<<< HEAD
+=======
+
+		// Preserve chaining for setter
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 		if ( arguments.length ) {
 			return options === undefined ?
 				this :
@@ -82,6 +92,7 @@ jQuery.fn.extend( {
 				} );
 		}
 
+<<<<<<< HEAD
 		var docElem, win,
 			elem = this[ 0 ],
 			box = { top: 0, left: 0 },
@@ -104,6 +115,38 @@ jQuery.fn.extend( {
 			top: box.top + win.pageYOffset - docElem.clientTop,
 			left: box.left + win.pageXOffset - docElem.clientLeft
 		};
+=======
+		var docElem, win, rect, doc,
+			elem = this[ 0 ];
+
+		if ( !elem ) {
+			return;
+		}
+
+		// Support: IE <=11 only
+		// Running getBoundingClientRect on a
+		// disconnected node in IE throws an error
+		if ( !elem.getClientRects().length ) {
+			return { top: 0, left: 0 };
+		}
+
+		rect = elem.getBoundingClientRect();
+
+		// Make sure element is not hidden (display: none)
+		if ( rect.width || rect.height ) {
+			doc = elem.ownerDocument;
+			win = getWindow( doc );
+			docElem = doc.documentElement;
+
+			return {
+				top: rect.top + win.pageYOffset - docElem.clientTop,
+				left: rect.left + win.pageXOffset - docElem.clientLeft
+			};
+		}
+
+		// Return zeros for disconnected and hidden elements (gh-2310)
+		return rect;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	},
 
 	position: function() {
@@ -134,8 +177,15 @@ jQuery.fn.extend( {
 			}
 
 			// Add offsetParent borders
+<<<<<<< HEAD
 			parentOffset.top += jQuery.css( offsetParent[ 0 ], "borderTopWidth", true );
 			parentOffset.left += jQuery.css( offsetParent[ 0 ], "borderLeftWidth", true );
+=======
+			parentOffset = {
+				top: parentOffset.top + jQuery.css( offsetParent[ 0 ], "borderTopWidth", true ),
+				left: parentOffset.left + jQuery.css( offsetParent[ 0 ], "borderLeftWidth", true )
+			};
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 		}
 
 		// Subtract parent offsets and element margins
@@ -193,10 +243,17 @@ jQuery.each( { scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function( 
 	};
 } );
 
+<<<<<<< HEAD
 // Support: Safari<7-8+, Chrome<37-44+
 // Add the top/left cssHooks using jQuery.fn.position
 // Webkit bug: https://bugs.webkit.org/show_bug.cgi?id=29084
 // Blink bug: https://code.google.com/p/chromium/issues/detail?id=229280
+=======
+// Support: Safari <=7 - 9.1, Chrome <=37 - 49
+// Add the top/left cssHooks using jQuery.fn.position
+// Webkit bug: https://bugs.webkit.org/show_bug.cgi?id=29084
+// Blink bug: https://bugs.chromium.org/p/chromium/issues/detail?id=589347
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 // getComputedStyle returns percent when specified for top/left/bottom/right;
 // rather than make the css module depend on the offset module, just check for it here
 jQuery.each( [ "top", "left" ], function( i, prop ) {
