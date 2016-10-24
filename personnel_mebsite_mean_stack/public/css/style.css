@@ -58,11 +58,20 @@ body a:hover{
 	position: relative;
 }
 .banner-info{
-	background: url(/img/clr.jpeg)repeat 0px 0px;
    height: 500px;
     background-position: top left;
     -webkit-animation: mymove 3s; /* Chrome, Safari, Opera */
     animation: mymove 3s;
+}
+
+.btn-personal{
+    background-color:transparent;color: #fff;font-weight: bold;border-color: #fff;
+}
+.btn-personal:hover{
+    background-color:#19CF86;color: #fff;font-weight: bold;border-color: #19CF86
+}
+.btn-personal:active{
+    background-color:#19CF86;color: #fff;font-weight: bold;border-color: #19CF86
 }
 /* Chrome, Safari, Opera */
 @-webkit-keyframes mymove {

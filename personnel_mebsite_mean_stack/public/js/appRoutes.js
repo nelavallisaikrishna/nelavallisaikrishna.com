@@ -9,7 +9,7 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 		})
 
 		.when('/home', {
-			templateUrl: 'views/home.html',
+			templateUrl: 'views/homezz.html',
 			controller: 'MainController'
 		});
 

@@ -14,6 +14,10 @@ angular.module('MainCtrl', []).controller('MainController', function($scope,$win
 
 		//console.log('scroll-----',scroll);
 		$scope.$apply();
+		$scope.images = ['http://res.cloudinary.com/symplocus/raw/upload/v1477306807/sai_1.6_exp_1_osx5kl.pdf' , 'http://res.cloudinary.com/symplocus/raw/upload/v1477306863/sai_1.6_exp_2_xwu76p.pdf'];
+		$scope.openLightboxModal = function (index) {
+			Lightbox.openModal($scope.images, index);
+		};
 	});
 
 });
