@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1d82e76-82f9-4c87-a45f-9a615ee6c791" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/js/appRoutes.js" afterPath="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/js/appRoutes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/profile.html" afterPath="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/profile.html" />
     </list>
     <ignored path="mywebsite.iws" />
@@ -25,21 +23,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/server.js">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="0" column="42" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="918">
+              <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#nav#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4122">
-              <caret line="229" column="168" selection-start-line="229" selection-start-column="168" selection-end-line="229" selection-end-column="168" />
+            <state relative-caret-position="324">
+              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -54,16 +70,6 @@
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h5#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="e#5107#5113#0" expanded="true" />
-                <element signature="e#5113#5119#0" expanded="true" />
-                <element signature="e#5119#5125#0" expanded="true" />
-                <element signature="e#5125#5131#0" expanded="true" />
-                <element signature="e#5131#5137#0" expanded="true" />
-                <element signature="e#5137#5143#0" expanded="true" />
-                <element signature="e#5143#5149#0" expanded="true" />
-                <element signature="e#5149#5155#0" expanded="true" />
-                <element signature="e#5155#5161#0" expanded="true" />
-                <element signature="e#5161#5167#0" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#1;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
@@ -90,59 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/index.html">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#nav#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="appRoutes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/js/appRoutes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/js/controllers/MainCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="42" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfileCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/js/controllers/ProfileCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="23" />
+            <state relative-caret-position="130">
+              <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -157,12 +115,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/js/controllers/ProfileCtrl.js" />
-        <option value="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/css/style.css" />
         <option value="$PROJECT_DIR$/personnel_mebsite_mean_stack/server.js" />
-        <option value="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/profile.html" />
-        <option value="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/index.html" />
         <option value="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/js/appRoutes.js" />
         <option value="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/js/controllers/MainCtrl.js" />
+        <option value="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/index.html" />
+        <option value="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/css/style.css" />
+        <option value="$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/profile.html" />
       </list>
     </option>
   </component>
@@ -206,6 +164,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -296,43 +255,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mywebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nelavallisaikrishna.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="personnel_mebsite_mean_stack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Core-Platform" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
@@ -413,6 +345,8 @@
       <updated>1468393398351</updated>
       <workItem from="1472535184764" duration="1691000" />
       <workItem from="1472553015102" duration="3743000" />
+      <workItem from="1477311355987" duration="2022000" />
+      <workItem from="1484116254395" duration="3163000" />
     </task>
     <task id="LOCAL-00001" summary="second commiyt">
       <created>1468481059839</created>
@@ -467,7 +401,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5434000" />
+    <option name="totallyTimeSpent" value="10619000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -485,7 +419,6 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19434103" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32246998" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7375643" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37907377" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -497,6 +430,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32246998" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -544,11 +478,132 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="42" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#nav#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4122">
+          <caret line="229" column="88" selection-start-line="229" selection-start-column="88" selection-end-line="229" selection-end-column="88" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#a#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#2;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#3;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#div#0;n#div#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#1;n#ul#0;n#div#0;n#div#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#2;n#ul#0;n#div#0;n#div#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#div#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#0;n#div#0;n#div#7;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#7;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1422">
+          <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#nav#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/js/appRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/js/controllers/MainCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="42" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/js/controllers/ProfileCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
           <caret line="37" column="27" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -570,16 +625,6 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h5#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="e#5107#5113#0" expanded="true" />
-            <element signature="e#5113#5119#0" expanded="true" />
-            <element signature="e#5119#5125#0" expanded="true" />
-            <element signature="e#5125#5131#0" expanded="true" />
-            <element signature="e#5131#5137#0" expanded="true" />
-            <element signature="e#5137#5143#0" expanded="true" />
-            <element signature="e#5143#5149#0" expanded="true" />
-            <element signature="e#5149#5155#0" expanded="true" />
-            <element signature="e#5155#5161#0" expanded="true" />
-            <element signature="e#5161#5167#0" expanded="true" />
             <element signature="n#style#0;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
@@ -617,7 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,16 +698,6 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h5#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="e#5107#5113#0" expanded="true" />
-            <element signature="e#5113#5119#0" expanded="true" />
-            <element signature="e#5119#5125#0" expanded="true" />
-            <element signature="e#5125#5131#0" expanded="true" />
-            <element signature="e#5131#5137#0" expanded="true" />
-            <element signature="e#5137#5143#0" expanded="true" />
-            <element signature="e#5143#5149#0" expanded="true" />
-            <element signature="e#5149#5155#0" expanded="true" />
-            <element signature="e#5155#5161#0" expanded="true" />
-            <element signature="e#5161#5167#0" expanded="true" />
             <element signature="n#style#0;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
@@ -728,16 +762,6 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h5#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="e#5107#5113#0" expanded="true" />
-            <element signature="e#5113#5119#0" expanded="true" />
-            <element signature="e#5119#5125#0" expanded="true" />
-            <element signature="e#5125#5131#0" expanded="true" />
-            <element signature="e#5131#5137#0" expanded="true" />
-            <element signature="e#5137#5143#0" expanded="true" />
-            <element signature="e#5143#5149#0" expanded="true" />
-            <element signature="e#5149#5155#0" expanded="true" />
-            <element signature="e#5155#5161#0" expanded="true" />
-            <element signature="e#5161#5167#0" expanded="true" />
             <element signature="n#style#0;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
@@ -788,16 +812,6 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h5#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="e#5107#5113#0" expanded="true" />
-            <element signature="e#5113#5119#0" expanded="true" />
-            <element signature="e#5119#5125#0" expanded="true" />
-            <element signature="e#5125#5131#0" expanded="true" />
-            <element signature="e#5131#5137#0" expanded="true" />
-            <element signature="e#5137#5143#0" expanded="true" />
-            <element signature="e#5143#5149#0" expanded="true" />
-            <element signature="e#5149#5155#0" expanded="true" />
-            <element signature="e#5155#5161#0" expanded="true" />
-            <element signature="e#5161#5167#0" expanded="true" />
             <element signature="n#style#0;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
@@ -848,16 +862,6 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h5#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="e#5107#5113#0" expanded="true" />
-            <element signature="e#5113#5119#0" expanded="true" />
-            <element signature="e#5119#5125#0" expanded="true" />
-            <element signature="e#5125#5131#0" expanded="true" />
-            <element signature="e#5131#5137#0" expanded="true" />
-            <element signature="e#5137#5143#0" expanded="true" />
-            <element signature="e#5143#5149#0" expanded="true" />
-            <element signature="e#5149#5155#0" expanded="true" />
-            <element signature="e#5155#5161#0" expanded="true" />
-            <element signature="e#5161#5167#0" expanded="true" />
             <element signature="n#style#0;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
@@ -893,13 +897,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/access.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -918,7 +915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -926,7 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -938,23 +933,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/js/appRoutes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
+        <state relative-caret-position="198">
           <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
           <folding />
         </state>
@@ -968,6 +949,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -978,10 +966,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#nav#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/img/cover.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/public/views/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4122">
-          <caret line="229" column="168" selection-start-line="229" selection-start-column="168" selection-end-line="229" selection-end-column="168" />
+        <state relative-caret-position="324">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -996,16 +1011,6 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h5#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="e#5107#5113#0" expanded="true" />
-            <element signature="e#5113#5119#0" expanded="true" />
-            <element signature="e#5119#5125#0" expanded="true" />
-            <element signature="e#5125#5131#0" expanded="true" />
-            <element signature="e#5131#5137#0" expanded="true" />
-            <element signature="e#5137#5143#0" expanded="true" />
-            <element signature="e#5143#5149#0" expanded="true" />
-            <element signature="e#5149#5155#0" expanded="true" />
-            <element signature="e#5155#5161#0" expanded="true" />
-            <element signature="e#5161#5167#0" expanded="true" />
             <element signature="n#style#0;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#div#0;n#span#1;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
@@ -1028,14 +1033,6 @@
             <element signature="n#style#0;n#iframe#0;n#div#0;n#div#0;n#div#0;n#div#7;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#7;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/personnel_mebsite_mean_stack/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
