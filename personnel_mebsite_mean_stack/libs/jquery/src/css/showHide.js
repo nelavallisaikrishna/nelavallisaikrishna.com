@@ -1,4 +1,8 @@
 define( [
+<<<<<<< HEAD
+	"../data/var/dataPriv"
+], function( dataPriv ) {
+=======
 	"../core",
 	"../data/var/dataPriv",
 	"../css/var/isHiddenWithinTree"
@@ -30,6 +34,7 @@ function getDefaultDisplay( elem ) {
 
 	return display;
 }
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 function showHide( elements, show ) {
 	var display, elem,
@@ -46,6 +51,12 @@ function showHide( elements, show ) {
 
 		display = elem.style.display;
 		if ( show ) {
+<<<<<<< HEAD
+			if ( display === "none" ) {
+
+				// Restore a pre-hide() value if we have one
+				values[ index ] = dataPriv.get( elem, "display" ) || "";
+=======
 
 			// Since we force visibility upon cascade-hidden elements, an immediate (and slow)
 			// check is required in this first loop unless we have a nonempty display value (either
@@ -58,18 +69,28 @@ function showHide( elements, show ) {
 			}
 			if ( elem.style.display === "" && isHiddenWithinTree( elem ) ) {
 				values[ index ] = getDefaultDisplay( elem );
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			}
 		} else {
 			if ( display !== "none" ) {
 				values[ index ] = "none";
 
+<<<<<<< HEAD
+				// Remember the value we're replacing
+=======
 				// Remember what we're overwriting
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				dataPriv.set( elem, "display", display );
 			}
 		}
 	}
 
+<<<<<<< HEAD
+	// Set the display of the elements in a second loop
+	// to avoid the constant reflow
+=======
 	// Set the display of the elements in a second loop to avoid constant reflow
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	for ( index = 0; index < length; index++ ) {
 		if ( values[ index ] != null ) {
 			elements[ index ].style.display = values[ index ];
@@ -79,6 +100,10 @@ function showHide( elements, show ) {
 	return elements;
 }
 
+<<<<<<< HEAD
+return showHide;
+
+=======
 jQuery.fn.extend( {
 	show: function() {
 		return showHide( this, true );
@@ -102,4 +127,5 @@ jQuery.fn.extend( {
 } );
 
 return showHide;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 } );

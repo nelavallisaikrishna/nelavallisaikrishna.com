@@ -6,8 +6,11 @@ define( [
 	"../selector"
 ], function( jQuery, access, support, rnotwhite ) {
 
+<<<<<<< HEAD
+=======
 "use strict";
 
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 var boolHook,
 	attrHandle = jQuery.expr.attrHandle;
 
@@ -38,10 +41,18 @@ jQuery.extend( {
 			return jQuery.prop( elem, name, value );
 		}
 
+<<<<<<< HEAD
+		// All attributes are lowercase
+		// Grab necessary hook if one is defined
+		if ( nType !== 1 || !jQuery.isXMLDoc( elem ) ) {
+			name = name.toLowerCase();
+			hooks = jQuery.attrHooks[ name ] ||
+=======
 		// Attribute hooks are determined by the lowercase version
 		// Grab necessary hook if one is defined
 		if ( nType !== 1 || !jQuery.isXMLDoc( elem ) ) {
 			hooks = jQuery.attrHooks[ name.toLowerCase() ] ||
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				( jQuery.expr.match.bool.test( name ) ? boolHook : undefined );
 		}
 
@@ -87,12 +98,28 @@ jQuery.extend( {
 	},
 
 	removeAttr: function( elem, value ) {
+<<<<<<< HEAD
+		var name, propName,
+=======
 		var name,
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 			i = 0,
 			attrNames = value && value.match( rnotwhite );
 
 		if ( attrNames && elem.nodeType === 1 ) {
 			while ( ( name = attrNames[ i++ ] ) ) {
+<<<<<<< HEAD
+				propName = jQuery.propFix[ name ] || name;
+
+				// Boolean attributes get special treatment (#10870)
+				if ( jQuery.expr.match.bool.test( name ) ) {
+
+					// Set corresponding property to false
+					elem[ propName ] = false;
+				}
+
+=======
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				elem.removeAttribute( name );
 			}
 		}
@@ -112,11 +139,26 @@ boolHook = {
 		return name;
 	}
 };
+<<<<<<< HEAD
+=======
 
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( i, name ) {
 	var getter = attrHandle[ name ] || jQuery.find.attr;
 
 	attrHandle[ name ] = function( elem, name, isXML ) {
+<<<<<<< HEAD
+		var ret, handle;
+		if ( !isXML ) {
+
+			// Avoid an infinite loop by temporarily removing this function from the getter
+			handle = attrHandle[ name ];
+			attrHandle[ name ] = ret;
+			ret = getter( elem, name, isXML ) != null ?
+				name.toLowerCase() :
+				null;
+			attrHandle[ name ] = handle;
+=======
 		var ret, handle,
 			lowercaseName = name.toLowerCase();
 
@@ -129,6 +171,7 @@ jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( i, name ) 
 				lowercaseName :
 				null;
 			attrHandle[ lowercaseName ] = handle;
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 		}
 		return ret;
 	};

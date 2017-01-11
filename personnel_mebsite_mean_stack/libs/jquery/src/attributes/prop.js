@@ -5,8 +5,11 @@ define( [
 	"../selector"
 ], function( jQuery, access, support ) {
 
+<<<<<<< HEAD
+=======
 "use strict";
 
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 var rfocusable = /^(?:input|select|textarea|button)$/i,
 	rclickable = /^(?:a|area)$/i;
 
@@ -59,10 +62,16 @@ jQuery.extend( {
 		tabIndex: {
 			get: function( elem ) {
 
+<<<<<<< HEAD
+				// elem.tabIndex doesn't always return the
+				// correct value when it hasn't been explicitly set
+				// http://fluidproject.org/blog/2008/01/09/getting-setting-and-removing-tabindex-values-with-javascript/
+=======
 				// Support: IE <=9 - 11 only
 				// elem.tabIndex doesn't always return the
 				// correct value when it hasn't been explicitly set
 				// https://web.archive.org/web/20141116233347/http://fluidproject.org/blog/2008/01/09/getting-setting-and-removing-tabindex-values-with-javascript/
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 				// Use proper attribute retrieval(#12072)
 				var tabindex = jQuery.find.attr( elem, "tabindex" );
 

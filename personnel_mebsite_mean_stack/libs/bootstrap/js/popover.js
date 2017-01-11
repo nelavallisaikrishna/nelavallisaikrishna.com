@@ -1,8 +1,15 @@
 /* ========================================================================
+<<<<<<< HEAD
+ * Bootstrap: popover.js v3.3.6
+ * http://getbootstrap.com/javascript/#popovers
+ * ========================================================================
+ * Copyright 2011-2015 Twitter, Inc.
+=======
  * Bootstrap: popover.js v3.3.7
  * http://getbootstrap.com/javascript/#popovers
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -19,7 +26,11 @@
 
   if (!$.fn.tooltip) throw new Error('Popover requires tooltip.js')
 
+<<<<<<< HEAD
+  Popover.VERSION  = '3.3.6'
+=======
   Popover.VERSION  = '3.3.7'
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
   Popover.DEFAULTS = $.extend({}, $.fn.tooltip.Constructor.DEFAULTS, {
     placement: 'right',

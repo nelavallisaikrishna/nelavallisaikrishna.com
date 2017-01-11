@@ -4,15 +4,33 @@ define( [
 	"../ajax",
 	"../traversing",
 	"../manipulation",
+<<<<<<< HEAD
+	"../selector",
+
+	// Optional event/alias dependency
+	"../event/alias"
+], function( jQuery ) {
+
+// Keep a copy of the old load method
+var _load = jQuery.fn.load;
+=======
 	"../selector"
 ], function( jQuery ) {
 
 "use strict";
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 /**
  * Load a url into a page
  */
 jQuery.fn.load = function( url, params, callback ) {
+<<<<<<< HEAD
+	if ( typeof url !== "string" && _load ) {
+		return _load.apply( this, arguments );
+	}
+
+=======
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 	var selector, type, response,
 		self = this,
 		off = url.indexOf( " " );

@@ -1,8 +1,15 @@
 /* ========================================================================
+<<<<<<< HEAD
+ * Bootstrap: affix.js v3.3.6
+ * http://getbootstrap.com/javascript/#affix
+ * ========================================================================
+ * Copyright 2011-2015 Twitter, Inc.
+=======
  * Bootstrap: affix.js v3.3.7
  * http://getbootstrap.com/javascript/#affix
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -28,7 +35,11 @@
     this.checkPosition()
   }
 
+<<<<<<< HEAD
+  Affix.VERSION  = '3.3.6'
+=======
   Affix.VERSION  = '3.3.7'
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
   Affix.RESET    = 'affix affix-top affix-bottom'
 

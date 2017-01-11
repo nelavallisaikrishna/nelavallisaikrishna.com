@@ -1,4 +1,13 @@
 /* ========================================================================
+<<<<<<< HEAD
+ * Bootstrap: collapse.js v3.3.6
+ * http://getbootstrap.com/javascript/#collapse
+ * ========================================================================
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+
+=======
  * Bootstrap: collapse.js v3.3.7
  * http://getbootstrap.com/javascript/#collapse
  * ========================================================================
@@ -7,6 +16,7 @@
  * ======================================================================== */
 
 /* jshint latedef: false */
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
 +function ($) {
   'use strict';
@@ -30,7 +40,11 @@
     if (this.options.toggle) this.toggle()
   }
 
+<<<<<<< HEAD
+  Collapse.VERSION  = '3.3.6'
+=======
   Collapse.VERSION  = '3.3.7'
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
   Collapse.TRANSITION_DURATION = 350
 

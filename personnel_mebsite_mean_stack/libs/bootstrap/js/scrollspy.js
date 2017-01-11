@@ -1,8 +1,15 @@
 /* ========================================================================
+<<<<<<< HEAD
+ * Bootstrap: scrollspy.js v3.3.6
+ * http://getbootstrap.com/javascript/#scrollspy
+ * ========================================================================
+ * Copyright 2011-2015 Twitter, Inc.
+=======
  * Bootstrap: scrollspy.js v3.3.7
  * http://getbootstrap.com/javascript/#scrollspy
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -28,7 +35,11 @@
     this.process()
   }
 
+<<<<<<< HEAD
+  ScrollSpy.VERSION  = '3.3.6'
+=======
   ScrollSpy.VERSION  = '3.3.7'
+>>>>>>> 22e0df6c90c13828c6dfe442d9c197d2e6010988
 
   ScrollSpy.DEFAULTS = {
     offset: 10
