@@ -5,12 +5,22 @@ angular.module('MainCtrl', []).controller('MainController', function($scope,$win
 	var window = angular.element($window);
 	window.bind('scroll', function ( ) {
 		var scroll = window.scrollTop();
-		if(scroll> 292 || scroll === undefined){
+		if(scroll> 190 || scroll === undefined){
 			$scope.data1 = true;
 			$("#div3").delay(10000).fadeIn();
 		}else{
 			$scope.data1 = false;
 		}
+        if(scroll> 260 || scroll === undefined){
+            $scope.data2 = true;
+        }else{
+            $scope.data2 = false;
+        }
+        if(scroll> 280 || scroll === undefined){
+            $scope.data3 = true;
+        }else{
+            $scope.data3 = false;
+        }
 
 		//console.log('scroll-----',scroll);
 		$scope.$apply();

@@ -85,11 +85,16 @@
 				<span style="color: #19CF86;font-size: 20px" class="fontfmly">
 					MY STORY
 				</span>
-				<p class="animated fadeInLeft" style="margin-top: 5%" ng-if="data1 == true">	An accomplished full-stack software developer with 2 years of experience in developing web application.
+				<p class="animated fadeInLeft hidden-xs hidden-sm" style="margin-top: 5%" ng-if="data1 == true">	An accomplished full-stack software developer with 2 years of experience in developing web application.
 					Currently working with Medibox Technologies, Bangalore as Software Developer, I am involved with designing and developing scalable digital platform for healthcare industry
 				</p>
 				<br>
-				<p id="#div3" ng-if="data1 == true"> Among other stuff, I would like to cook and play sports like volleyball,cricket,badminton</p>
+				<p class="animated fadeInLeft hidden-xs hidden-sm" ng-if="data1 == true"> Among other stuff, I would like to cook and play sports like volleyball,cricket,badminton</p>
+				<p class="animated fadeInLeft hidden-md hidden-lg" style="margin-top: 5%" >	An accomplished full-stack software developer with 2 years of experience in developing web application.
+					Currently working with Medibox Technologies, Bangalore as Software Developer, I am involved with designing and developing scalable digital platform for healthcare industry
+				</p>
+				<br>
+				<p class="hidden-md hidden-lg"> Among other stuff, I would like to cook and play sports like volleyball,cricket,badminton</p>
 				<!--<div id="fb-root"></div>-->
 				<!--<script>(function(d, s, id) {-->
 					<!--var js, fjs = d.getElementsByTagName(s)[0];-->
@@ -102,9 +107,29 @@
 			</div>
 			<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" style="text-align: center;padding-bottom: 2%" >
 				<!--<img src="/img/saiimg.jpg" class="img-circle" alt="Cinque Terre" width="304" height="236">-->
-				<img src="http://res.cloudinary.com/symplocus/image/upload/v1477302972/IMG_4725_wpdwmh.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+				<img src="http://res.cloudinary.com/symplocus/image/upload/v1477302972/IMG_4725_wpdwmh.jpg"  ng-if="data1 == true"  class="img-thumbnail animated zoomIn hidden-sm hidden-xs" alt="Cinque Terre" width="304" height="236">
+				<img src="http://res.cloudinary.com/symplocus/image/upload/v1477302972/IMG_4725_wpdwmh.jpg" class="img-thumbnail animated zoomIn hidden-lg hidden-md" alt="Cinque Terre" width="304" height="236">
 			</div>
-			<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 person-info" style="padding-bottom: 2%">
+			<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 person-info hidden-xs hidden-sm  animated fadeInRight " ng-if="data1 == true" style="padding-bottom: 2%">
+				<span style="color: #19CF86;font-size: 20px" class="fontfmly">
+					PERSONAL INFORMATION
+				</span>
+				<h5 style="margin-top: 5%"><span>Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Saikrishna Nelavalli </h5>
+				<h5><span>Email :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="mailto:saikrishna.ece2013@gmail.com">saikrishna.ece2013@gmail.com</a></h5>
+				<h5><span>Mobile No :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>+91- 9000 333 105 </h5>
+				<h5><span>Age :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 25 Years</h5>
+				<h5><span>Status :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Single </h5>
+				<h5><span>Address :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Bangalore, India</h5>
+				<span class="falinks">
+						<div style="text-align: left;margin-top: 2%;font-size: 11px;">
+							<a href="https://www.facebook.com/saikrishna.nelavalli" target="_top" style="color: #D5D4D4;"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+							<a href="https://github.com/nelavallisaikrishna" target="_top" style="color: #D5D4D4;"><i id="social-tw" class="fa fa-github-square fa-3x social"></i></a>
+							<a href="https://www.linkedin.com/in/saikrishnanelavalli?trk=nav_responsive_tab_profile" target="_top" style="color: #D5D4D4;"><i id="social-gp" class="fa fa-linkedin-square fa-3x social"></i></a>
+							<a href="mailto:saikrishna.ece2013@gmail.com" style="color: #D5D4D4;"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+						</div>
+				</span>
+			</div>
+			<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 person-info hidden-lg hidden-md" style="padding-bottom: 2%">
 				<span style="color: #19CF86;font-size: 20px" class="fontfmly">
 					PERSONAL INFORMATION
 				</span>
